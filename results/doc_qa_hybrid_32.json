@@ -1,0 +1,297 @@
+{
+  "summary": {
+    "task": "doc_qa",
+    "method": "hybrid",
+    "samples": 5,
+    "size": 32,
+    "mean_error": 0.2,
+    "solve_rate": 0.8,
+    "total_llm_calls": 6,
+    "calls_per_solved": 1.5,
+    "routing": {
+      "deterministic": 4,
+      "fuzzy": 1,
+      "fallbacks": 0
+    },
+    "tokens": {
+      "provider": "lmstudio",
+      "model": "google/gemma-4-e4b",
+      "calls": 6,
+      "prompt_tokens": 1727,
+      "completion_tokens": 2002
+    },
+    "seconds": 29.5
+  },
+  "records": [
+    {
+      "input": {
+        "text": "\u201cNo, my dear; I think not. I have great hopes of finding him quite the reverse. There is a mixture of servility and self-importance in his letter which promises well. I am impatient to see him.\u201d \u201cIn point of composition,\u201d said Mary, \u201chis letter does not seem defective. The idea of the olive branch perhaps is not wholly new, yet I think it is well expressed.\u201d",
+        "question": "How many times does the word \"Mary\" appear in the text (case-insensitive)?"
+      },
+      "ground_truth": 1,
+      "answer": {
+        "text": "\u201cNo, my dear; I think not. I have great hopes of finding him quite the reverse. There is a mixture of servility and self-importance in his letter which promises well. I am impatient to see him.\u201d \u201cIn point of composition,\u201d said Mary, \u201chis letter does not seem defective. The idea of the olive branch perhaps is not wholly new, yet I think it is well expressed.\u201d",
+        "question": "How many times does the word \"Mary\" appear in the text (case-insensitive)?",
+        "answer": 1,
+        "routing": {
+          "route": "deterministic",
+          "tool": "count_occurrences",
+          "fallback_reason": null
+        }
+      },
+      "routing": {
+        "route": "deterministic",
+        "tool": "count_occurrences",
+        "fallback_reason": null
+      },
+      "error": 0,
+      "llm_calls": 1,
+      "graph": [
+        {
+          "id": 0,
+          "content": {
+            "text": "\u201cNo, my dear; I think not. I have great hopes of finding him quite the reverse. There is a mixture of servility and self-importance in his letter which promises well. I am impatient to see him.\u201d \u201cIn point of composition,\u201d said Mary, \u201chis letter does not seem defective. The idea of the olive branch perhaps is not wholly new, yet I think it is well expressed.\u201d",
+            "question": "How many times does the word \"Mary\" appear in the text (case-insensitive)?"
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 1,
+          "content": {
+            "text": "\u201cNo, my dear; I think not. I have great hopes of finding him quite the reverse. There is a mixture of servility and self-importance in his letter which promises well. I am impatient to see him.\u201d \u201cIn point of composition,\u201d said Mary, \u201chis letter does not seem defective. The idea of the olive branch perhaps is not wholly new, yet I think it is well expressed.\u201d",
+            "question": "How many times does the word \"Mary\" appear in the text (case-insensitive)?",
+            "answer": 1,
+            "routing": {
+              "route": "deterministic",
+              "tool": "count_occurrences",
+              "fallback_reason": null
+            }
+          },
+          "parents": [
+            0
+          ],
+          "operation": "route-deterministic",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "input": {
+        "text": "\u201cI have answered three questions, and that is enough,\u201d Said his father; \u201cdon\u2019t give yourself airs! Do you think I can listen all day to such stuff? Be off, or I\u2019ll kick you down stairs!\u201d This time Alice waited patiently until it chose to speak again. In a minute or two the Caterpillar took the hookah out of its mouth and yawned once or twice, and shook itself. Then it got down off the mushroom, and crawled away in the grass, merely remarking as it went, \u201cOne side will make you grow taller, and the other side will make you grow shorter.\u201d",
+        "question": "How many times does the word \"Said\" appear in the text (case-insensitive)?"
+      },
+      "ground_truth": 1,
+      "answer": {
+        "text": "\u201cI have answered three questions, and that is enough,\u201d Said his father; \u201cdon\u2019t give yourself airs! Do you think I can listen all day to such stuff? Be off, or I\u2019ll kick you down stairs!\u201d This time Alice waited patiently until it chose to speak again. In a minute or two the Caterpillar took the hookah out of its mouth and yawned once or twice, and shook itself. Then it got down off the mushroom, and crawled away in the grass, merely remarking as it went, \u201cOne side will make you grow taller, and the other side will make you grow shorter.\u201d",
+        "question": "How many times does the word \"Said\" appear in the text (case-insensitive)?",
+        "answer": 1,
+        "routing": {
+          "route": "deterministic",
+          "tool": "count_occurrences",
+          "fallback_reason": null
+        }
+      },
+      "routing": {
+        "route": "deterministic",
+        "tool": "count_occurrences",
+        "fallback_reason": null
+      },
+      "error": 0,
+      "llm_calls": 1,
+      "graph": [
+        {
+          "id": 2,
+          "content": {
+            "text": "\u201cI have answered three questions, and that is enough,\u201d Said his father; \u201cdon\u2019t give yourself airs! Do you think I can listen all day to such stuff? Be off, or I\u2019ll kick you down stairs!\u201d This time Alice waited patiently until it chose to speak again. In a minute or two the Caterpillar took the hookah out of its mouth and yawned once or twice, and shook itself. Then it got down off the mushroom, and crawled away in the grass, merely remarking as it went, \u201cOne side will make you grow taller, and the other side will make you grow shorter.\u201d",
+            "question": "How many times does the word \"Said\" appear in the text (case-insensitive)?"
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 3,
+          "content": {
+            "text": "\u201cI have answered three questions, and that is enough,\u201d Said his father; \u201cdon\u2019t give yourself airs! Do you think I can listen all day to such stuff? Be off, or I\u2019ll kick you down stairs!\u201d This time Alice waited patiently until it chose to speak again. In a minute or two the Caterpillar took the hookah out of its mouth and yawned once or twice, and shook itself. Then it got down off the mushroom, and crawled away in the grass, merely remarking as it went, \u201cOne side will make you grow taller, and the other side will make you grow shorter.\u201d",
+            "question": "How many times does the word \"Said\" appear in the text (case-insensitive)?",
+            "answer": 1,
+            "routing": {
+              "route": "deterministic",
+              "tool": "count_occurrences",
+              "fallback_reason": null
+            }
+          },
+          "parents": [
+            2
+          ],
+          "operation": "route-deterministic",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "input": {
+        "text": "He then told her of Georgiana\u2019s delight in her acquaintance, and of her disappointment at its sudden interruption; which naturally leading to the cause of that interruption, she soon learnt that his resolution of following her from Derbyshire in quest of her sister had been formed before he quitted the inn, and that his gravity and thoughtfulness there had arisen from no other struggles than what such a purpose must comprehend. After walking several miles in a leisurely manner, and too busy to know anything about it, they found at last, on examining their watches, that it was time to be at home.",
+        "question": "How many times does the word \"Derbyshire\" appear in the text (case-insensitive)?"
+      },
+      "ground_truth": 1,
+      "answer": {
+        "text": "He then told her of Georgiana\u2019s delight in her acquaintance, and of her disappointment at its sudden interruption; which naturally leading to the cause of that interruption, she soon learnt that his resolution of following her from Derbyshire in quest of her sister had been formed before he quitted the inn, and that his gravity and thoughtfulness there had arisen from no other struggles than what such a purpose must comprehend. After walking several miles in a leisurely manner, and too busy to know anything about it, they found at last, on examining their watches, that it was time to be at home.",
+        "question": "How many times does the word \"Derbyshire\" appear in the text (case-insensitive)?",
+        "answer": 1,
+        "routing": {
+          "route": "deterministic",
+          "tool": "count_occurrences",
+          "fallback_reason": null
+        }
+      },
+      "routing": {
+        "route": "deterministic",
+        "tool": "count_occurrences",
+        "fallback_reason": null
+      },
+      "error": 0,
+      "llm_calls": 1,
+      "graph": [
+        {
+          "id": 4,
+          "content": {
+            "text": "He then told her of Georgiana\u2019s delight in her acquaintance, and of her disappointment at its sudden interruption; which naturally leading to the cause of that interruption, she soon learnt that his resolution of following her from Derbyshire in quest of her sister had been formed before he quitted the inn, and that his gravity and thoughtfulness there had arisen from no other struggles than what such a purpose must comprehend. After walking several miles in a leisurely manner, and too busy to know anything about it, they found at last, on examining their watches, that it was time to be at home.",
+            "question": "How many times does the word \"Derbyshire\" appear in the text (case-insensitive)?"
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 5,
+          "content": {
+            "text": "He then told her of Georgiana\u2019s delight in her acquaintance, and of her disappointment at its sudden interruption; which naturally leading to the cause of that interruption, she soon learnt that his resolution of following her from Derbyshire in quest of her sister had been formed before he quitted the inn, and that his gravity and thoughtfulness there had arisen from no other struggles than what such a purpose must comprehend. After walking several miles in a leisurely manner, and too busy to know anything about it, they found at last, on examining their watches, that it was time to be at home.",
+            "question": "How many times does the word \"Derbyshire\" appear in the text (case-insensitive)?",
+            "answer": 1,
+            "routing": {
+              "route": "deterministic",
+              "tool": "count_occurrences",
+              "fallback_reason": null
+            }
+          },
+          "parents": [
+            4
+          ],
+          "operation": "route-deterministic",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "input": {
+        "text": "It was all very well to say \u201cDrink me,\u201d but the wise little Alice was not going to do _that_ in a hurry. \u201cNo, I\u2019ll look first,\u201d she said, \u201cand see whether it\u2019s marked \u2018_poison_\u2019 or not\u201d; for she had read several nice little histories about children who had got burnt, and eaten up by wild beasts and other unpleasant things, all because they _would_ not remember the simple rules their friends had taught them: such as, that a red-hot poker will burn you if you hold it too long; and that if you cut your finger _very_ deeply with a knife, it usually bleeds; and she had never forgotten that, if you drink much from a bottle marked \u201cpoison,\u201d it is almost certain to disagree with you, sooner or later. However, this bottle was _not_ marked \u201cpoison,\u201d so Alice ventured to taste it, and finding it very nice, (it had, in fact, a sort of mixed flavour of cherry-tart, custard, pine-apple, roast turkey, toffee, and hot buttered toast,) she very soon finished it off.",
+        "question": "How many times does the word \"Alice\" appear in the text (case-insensitive)?"
+      },
+      "ground_truth": 2,
+      "answer": {
+        "text": "It was all very well to say \u201cDrink me,\u201d but the wise little Alice was not going to do _that_ in a hurry. \u201cNo, I\u2019ll look first,\u201d she said, \u201cand see whether it\u2019s marked \u2018_poison_\u2019 or not\u201d; for she had read several nice little histories about children who had got burnt, and eaten up by wild beasts and other unpleasant things, all because they _would_ not remember the simple rules their friends had taught them: such as, that a red-hot poker will burn you if you hold it too long; and that if you cut your finger _very_ deeply with a knife, it usually bleeds; and she had never forgotten that, if you drink much from a bottle marked \u201cpoison,\u201d it is almost certain to disagree with you, sooner or later. However, this bottle was _not_ marked \u201cpoison,\u201d so Alice ventured to taste it, and finding it very nice, (it had, in fact, a sort of mixed flavour of cherry-tart, custard, pine-apple, roast turkey, toffee, and hot buttered toast,) she very soon finished it off.",
+        "question": "How many times does the word \"Alice\" appear in the text (case-insensitive)?",
+        "answer": 2,
+        "routing": {
+          "route": "deterministic",
+          "tool": "count_occurrences",
+          "fallback_reason": null
+        }
+      },
+      "routing": {
+        "route": "deterministic",
+        "tool": "count_occurrences",
+        "fallback_reason": null
+      },
+      "error": 0,
+      "llm_calls": 1,
+      "graph": [
+        {
+          "id": 6,
+          "content": {
+            "text": "It was all very well to say \u201cDrink me,\u201d but the wise little Alice was not going to do _that_ in a hurry. \u201cNo, I\u2019ll look first,\u201d she said, \u201cand see whether it\u2019s marked \u2018_poison_\u2019 or not\u201d; for she had read several nice little histories about children who had got burnt, and eaten up by wild beasts and other unpleasant things, all because they _would_ not remember the simple rules their friends had taught them: such as, that a red-hot poker will burn you if you hold it too long; and that if you cut your finger _very_ deeply with a knife, it usually bleeds; and she had never forgotten that, if you drink much from a bottle marked \u201cpoison,\u201d it is almost certain to disagree with you, sooner or later. However, this bottle was _not_ marked \u201cpoison,\u201d so Alice ventured to taste it, and finding it very nice, (it had, in fact, a sort of mixed flavour of cherry-tart, custard, pine-apple, roast turkey, toffee, and hot buttered toast,) she very soon finished it off.",
+            "question": "How many times does the word \"Alice\" appear in the text (case-insensitive)?"
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 7,
+          "content": {
+            "text": "It was all very well to say \u201cDrink me,\u201d but the wise little Alice was not going to do _that_ in a hurry. \u201cNo, I\u2019ll look first,\u201d she said, \u201cand see whether it\u2019s marked \u2018_poison_\u2019 or not\u201d; for she had read several nice little histories about children who had got burnt, and eaten up by wild beasts and other unpleasant things, all because they _would_ not remember the simple rules their friends had taught them: such as, that a red-hot poker will burn you if you hold it too long; and that if you cut your finger _very_ deeply with a knife, it usually bleeds; and she had never forgotten that, if you drink much from a bottle marked \u201cpoison,\u201d it is almost certain to disagree with you, sooner or later. However, this bottle was _not_ marked \u201cpoison,\u201d so Alice ventured to taste it, and finding it very nice, (it had, in fact, a sort of mixed flavour of cherry-tart, custard, pine-apple, roast turkey, toffee, and hot buttered toast,) she very soon finished it off.",
+            "question": "How many times does the word \"Alice\" appear in the text (case-insensitive)?",
+            "answer": 2,
+            "routing": {
+              "route": "deterministic",
+              "tool": "count_occurrences",
+              "fallback_reason": null
+            }
+          },
+          "parents": [
+            6
+          ],
+          "operation": "route-deterministic",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "input": {
+        "text": "\u201cBeautiful Soup, so rich and green, Waiting in a hot tureen! Who for such dainties would not stoop? Soup of the evening, beautiful Soup! Soup of the evening, beautiful Soup! Beau\u2014ootiful Soo\u2014oop! Beau\u2014ootiful Soo\u2014oop! Soo\u2014oop of the e\u2014e\u2014evening, Beautiful, beautiful Soup! \u201cBeautiful Soup! Who cares for fish, Game, or any other dish? Who would not give all else for two p ennyworth only of beautiful Soup? Pennyworth only of beautiful Soup? Beau\u2014ootiful Soo\u2014oop! Beau\u2014ootiful Soo\u2014oop! Soo\u2014oop of the e\u2014e\u2014evening, Beautiful, beauti\u2014FUL SOUP!\u201d",
+        "question": "How many times do the words \"Soup\" and \"Soo\" appear in the text in total (case-insensitive, sum of both counts)?"
+      },
+      "ground_truth": 16,
+      "answer": {
+        "text": "\u201cBeautiful Soup, so rich and green, Waiting in a hot tureen! Who for such dainties would not stoop? Soup of the evening, beautiful Soup! Soup of the evening, beautiful Soup! Beau\u2014ootiful Soo\u2014oop! Beau\u2014ootiful Soo\u2014oop! Soo\u2014oop of the e\u2014e\u2014evening, Beautiful, beautiful Soup! \u201cBeautiful Soup! Who cares for fish, Game, or any other dish? Who would not give all else for two p ennyworth only of beautiful Soup? Pennyworth only of beautiful Soup? Beau\u2014ootiful Soo\u2014oop! Beau\u2014ootiful Soo\u2014oop! Soo\u2014oop of the e\u2014e\u2014evening, Beautiful, beauti\u2014FUL SOUP!\u201d",
+        "question": "How many times do the words \"Soup\" and \"Soo\" appear in the text in total (case-insensitive, sum of both counts)?",
+        "answer": 13,
+        "routing": {
+          "route": "fuzzy",
+          "tool": null,
+          "fallback_reason": null
+        }
+      },
+      "routing": {
+        "route": "fuzzy",
+        "tool": null,
+        "fallback_reason": null
+      },
+      "error": 1,
+      "llm_calls": 2,
+      "graph": [
+        {
+          "id": 8,
+          "content": {
+            "text": "\u201cBeautiful Soup, so rich and green, Waiting in a hot tureen! Who for such dainties would not stoop? Soup of the evening, beautiful Soup! Soup of the evening, beautiful Soup! Beau\u2014ootiful Soo\u2014oop! Beau\u2014ootiful Soo\u2014oop! Soo\u2014oop of the e\u2014e\u2014evening, Beautiful, beautiful Soup! \u201cBeautiful Soup! Who cares for fish, Game, or any other dish? Who would not give all else for two p ennyworth only of beautiful Soup? Pennyworth only of beautiful Soup? Beau\u2014ootiful Soo\u2014oop! Beau\u2014ootiful Soo\u2014oop! Soo\u2014oop of the e\u2014e\u2014evening, Beautiful, beauti\u2014FUL SOUP!\u201d",
+            "question": "How many times do the words \"Soup\" and \"Soo\" appear in the text in total (case-insensitive, sum of both counts)?"
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 9,
+          "content": {
+            "text": "\u201cBeautiful Soup, so rich and green, Waiting in a hot tureen! Who for such dainties would not stoop? Soup of the evening, beautiful Soup! Soup of the evening, beautiful Soup! Beau\u2014ootiful Soo\u2014oop! Beau\u2014ootiful Soo\u2014oop! Soo\u2014oop of the e\u2014e\u2014evening, Beautiful, beautiful Soup! \u201cBeautiful Soup! Who cares for fish, Game, or any other dish? Who would not give all else for two p ennyworth only of beautiful Soup? Pennyworth only of beautiful Soup? Beau\u2014ootiful Soo\u2014oop! Beau\u2014ootiful Soo\u2014oop! Soo\u2014oop of the e\u2014e\u2014evening, Beautiful, beauti\u2014FUL SOUP!\u201d",
+            "question": "How many times do the words \"Soup\" and \"Soo\" appear in the text in total (case-insensitive, sum of both counts)?",
+            "answer": 13,
+            "routing": {
+              "route": "fuzzy",
+              "tool": null,
+              "fallback_reason": null
+            }
+          },
+          "parents": [
+            8
+          ],
+          "operation": "route-fuzzy",
+          "score": 0
+        }
+      ]
+    }
+  ]
+}

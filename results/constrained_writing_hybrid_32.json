@@ -1,0 +1,125 @@
+{
+  "summary": {
+    "task": "constrained_writing",
+    "method": "hybrid",
+    "samples": 1,
+    "size": 32,
+    "mean_error": 0.0,
+    "solve_rate": 1.0,
+    "total_llm_calls": 6,
+    "calls_per_solved": 6.0,
+    "tokens": {
+      "provider": "lmstudio",
+      "model": "google/gemma-4-e4b",
+      "calls": 6,
+      "prompt_tokens": 523,
+      "completion_tokens": 2357
+    },
+    "seconds": 33.6
+  },
+  "records": [
+    {
+      "input": {
+        "required": [
+          "sparrow",
+          "harbor",
+          "lantern"
+        ],
+        "sentences": 3,
+        "max_words": 64,
+        "topic": "a library in winter",
+        "text": ""
+      },
+      "ground_truth": null,
+      "answer": {
+        "required": [
+          "sparrow",
+          "harbor",
+          "lantern"
+        ],
+        "sentences": 3,
+        "max_words": 64,
+        "topic": "a library in winter",
+        "text": "The cold outside seemed to harbor only silence within the library's warm glow, watched by a lonely sparrow. Through the tall window, an antique lantern cast dancing shadows on stacks of forgotten tales. Inside, the scent of old paper and pine needles offered perfect sanctuary from the winter world."
+      },
+      "error": 0,
+      "llm_calls": 6,
+      "graph": [
+        {
+          "id": 0,
+          "content": {
+            "required": [
+              "sparrow",
+              "harbor",
+              "lantern"
+            ],
+            "sentences": 3,
+            "max_words": 64,
+            "topic": "a library in winter",
+            "text": ""
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 1,
+          "content": {
+            "required": [
+              "sparrow",
+              "harbor",
+              "lantern"
+            ],
+            "sentences": 3,
+            "max_words": 64,
+            "topic": "a library in winter",
+            "text": "The cold outside seemed to harbor only silence within the library's warm glow, watched by a lonely sparrow. Through the tall window, an antique lantern cast dancing shadows on stacks of forgotten tales. Inside, the scent of old paper and pine needles offered perfect sanctuary from the winter world."
+          },
+          "parents": [
+            0
+          ],
+          "operation": "generate",
+          "score": 0.2
+        },
+        {
+          "id": 2,
+          "content": {
+            "required": [
+              "sparrow",
+              "harbor",
+              "lantern"
+            ],
+            "sentences": 3,
+            "max_words": 64,
+            "topic": "a library in winter",
+            "text": "The winter air outside seemed to whisper through the windowpanes, while a tiny sparrow landed on the sill like an unexpected guest. Inside, the warmth of the reading room offered refuge from the cold, a quiet harbor for books and dreams. Only the gentle glow of antique lanterns illuminated the stacked shelves tonight."
+          },
+          "parents": [
+            0
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 3,
+          "content": {
+            "required": [
+              "sparrow",
+              "harbor",
+              "lantern"
+            ],
+            "sentences": 3,
+            "max_words": 64,
+            "topic": "a library in winter",
+            "text": "A lone sparrow searched for crumbs near the window's sill as twilight fell. Inside, the warm glow of a brass lantern seemed to harbor stories from distant lands. Winter quiet enveloped the great hall, making every turn of a page feel like an escape."
+          },
+          "parents": [
+            0
+          ],
+          "operation": "generate",
+          "score": 0
+        }
+      ]
+    }
+  ]
+}

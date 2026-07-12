@@ -1,0 +1,537 @@
+{
+  "summary": {
+    "task": "doc_summary",
+    "method": "got",
+    "samples": 5,
+    "size": 32,
+    "mean_error": 0.0,
+    "solve_rate": 1.0,
+    "total_llm_calls": 15,
+    "calls_per_solved": 3.0,
+    "routing": null,
+    "tokens": {
+      "provider": "lmstudio",
+      "model": "google/gemma-4-e4b",
+      "calls": 15,
+      "prompt_tokens": 4980,
+      "completion_tokens": 7562
+    },
+    "seconds": 117.9
+  },
+  "records": [
+    {
+      "input": {
+        "text": "\u201cNo, my dear; I think not. I have great hopes of finding him quite the reverse. There is a mixture of servility and self-importance in his letter which promises well. I am impatient to see him.\u201d \u201cIn point of composition,\u201d said Mary, \u201chis letter does not seem defective. The idea of the olive branch perhaps is not wholly new, yet I think it is well expressed.\u201d To Catherine and Lydia neither the letter nor its writer were in any degree interesting. It was next to impossible that their cousin should come in a scarlet coat, and it was now some weeks since they had received pleasure from the society of a man in any other colour. As for their mother, Mr. Collins\u2019s letter had done away much of her ill-will, and she was preparing to see him with a degree of composure which astonished her husband and daughters. Mr. Collins was punctual to his time, and was received with great politeness by the whole family. Mr. Bennet indeed said little; but the ladies were ready enough to talk, and Mr. Collins seemed neither in need of encouragement, nor inclined to be silent himself. He was a tall, heavy-looking young man of five-and-twenty. His air was grave and stately, and his manners were very formal. He had not been long seated before he complimented Mrs. Bennet on having so fine a family of daughters, said he had heard much of their beauty, but that, in this instance, fame had fallen short of the truth; and added, that he did not doubt her seeing them all in due time well disposed of in marriage. This gallantry was not much to the taste of some of his hearers; but Mrs. Bennet, who quarrelled with no compliments, answered most readily,--",
+        "required": [
+          "Mrs",
+          "Mary",
+          "Catherine",
+          "Lydia"
+        ],
+        "max_words": 64,
+        "summary": ""
+      },
+      "ground_truth": null,
+      "answer": {
+        "text": "\u201cNo, my dear; I think not. I have great hopes of finding him quite the reverse. There is a mixture of servility and self-importance in his letter which promises well. I am impatient to see him.\u201d \u201cIn point of composition,\u201d said Mary, \u201chis letter does not seem defective. The idea of the olive branch perhaps is not wholly new, yet I think it is well expressed.\u201d To Catherine and Lydia neither the letter nor its writer were in any degree interesting. It was next to impossible that their cousin should come in a scarlet coat, and it was now some weeks since they had received pleasure from the society of a man in any other colour. As for their mother, Mr. Collins\u2019s letter had done away much of her ill-will, and she was preparing to see him with a degree of composure which astonished her husband and daughters. Mr. Collins was punctual to his time, and was received with great politeness by the whole family. Mr. Bennet indeed said little; but the ladies were ready enough to talk, and Mr. Collins seemed neither in need of encouragement, nor inclined to be silent himself. He was a tall, heavy-looking young man of five-and-twenty. His air was grave and stately, and his manners were very formal. He had not been long seated before he complimented Mrs. Bennet on having so fine a family of daughters, said he had heard much of their beauty, but that, in this instance, fame had fallen short of the truth; and added, that he did not doubt her seeing them all in due time well disposed of in marriage. This gallantry was not much to the taste of some of his hearers; but Mrs. Bennet, who quarrelled with no compliments, answered most readily,--",
+        "required": [
+          "Mrs",
+          "Mary",
+          "Catherine",
+          "Lydia"
+        ],
+        "max_words": 64,
+        "summary": "After analyzing Mr. Collins\u2019s letter\u2014which amused Mrs. Bennet and was deemed well-expressed by Mary\u2014Catherine and Lydia remained uninterested in him. When the formal young man arrived, he complimented Mrs. Bennet on her family's beautiful daughters, noting their prospects for marriage."
+      },
+      "routing": null,
+      "error": 0,
+      "llm_calls": 3,
+      "graph": [
+        {
+          "id": 0,
+          "content": {
+            "text": "\u201cNo, my dear; I think not. I have great hopes of finding him quite the reverse. There is a mixture of servility and self-importance in his letter which promises well. I am impatient to see him.\u201d \u201cIn point of composition,\u201d said Mary, \u201chis letter does not seem defective. The idea of the olive branch perhaps is not wholly new, yet I think it is well expressed.\u201d To Catherine and Lydia neither the letter nor its writer were in any degree interesting. It was next to impossible that their cousin should come in a scarlet coat, and it was now some weeks since they had received pleasure from the society of a man in any other colour. As for their mother, Mr. Collins\u2019s letter had done away much of her ill-will, and she was preparing to see him with a degree of composure which astonished her husband and daughters. Mr. Collins was punctual to his time, and was received with great politeness by the whole family. Mr. Bennet indeed said little; but the ladies were ready enough to talk, and Mr. Collins seemed neither in need of encouragement, nor inclined to be silent himself. He was a tall, heavy-looking young man of five-and-twenty. His air was grave and stately, and his manners were very formal. He had not been long seated before he complimented Mrs. Bennet on having so fine a family of daughters, said he had heard much of their beauty, but that, in this instance, fame had fallen short of the truth; and added, that he did not doubt her seeing them all in due time well disposed of in marriage. This gallantry was not much to the taste of some of his hearers; but Mrs. Bennet, who quarrelled with no compliments, answered most readily,--",
+            "required": [
+              "Mrs",
+              "Mary",
+              "Catherine",
+              "Lydia"
+            ],
+            "max_words": 64,
+            "summary": ""
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 1,
+          "content": {
+            "text": "\u201cNo, my dear; I think not. I have great hopes of finding him quite the reverse. There is a mixture of servility and self-importance in his letter which promises well. I am impatient to see him.\u201d \u201cIn point of composition,\u201d said Mary, \u201chis letter does not seem defective. The idea of the olive branch perhaps is not wholly new, yet I think it is well expressed.\u201d To Catherine and Lydia neither the letter nor its writer were in any degree interesting. It was next to impossible that their cousin should come in a scarlet coat, and it was now some weeks since they had received pleasure from the society of a man in any other colour. As for their mother, Mr. Collins\u2019s letter had done away much of her ill-will, and she was preparing to see him with a degree of composure which astonished her husband and daughters. Mr. Collins was punctual to his time, and was received with great politeness by the whole family. Mr. Bennet indeed said little; but the ladies were ready enough to talk, and Mr. Collins seemed neither in need of encouragement, nor inclined to be silent himself. He was a tall, heavy-looking young man of five-and-twenty. His air was grave and stately, and his manners were very formal. He had not been long seated before he complimented Mrs. Bennet on having so fine a family of daughters, said he had heard much of their beauty, but that, in this instance, fame had fallen short of the truth; and added, that he did not doubt her seeing them all in due time well disposed of in marriage. This gallantry was not much to the taste of some of his hearers; but Mrs. Bennet, who quarrelled with no compliments, answered most readily,--",
+            "required": [
+              "Mrs",
+              "Mary",
+              "Catherine",
+              "Lydia"
+            ],
+            "max_words": 64,
+            "summary": "After analyzing Mr. Collins\u2019s letter\u2014which amused Mrs. Bennet and was deemed well-expressed by Mary\u2014Catherine and Lydia remained uninterested in him. When the formal young man arrived, he complimented Mrs. Bennet on her family's beautiful daughters, noting their prospects for marriage."
+          },
+          "parents": [
+            0
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 2,
+          "content": {
+            "text": "\u201cNo, my dear; I think not. I have great hopes of finding him quite the reverse. There is a mixture of servility and self-importance in his letter which promises well. I am impatient to see him.\u201d \u201cIn point of composition,\u201d said Mary, \u201chis letter does not seem defective. The idea of the olive branch perhaps is not wholly new, yet I think it is well expressed.\u201d To Catherine and Lydia neither the letter nor its writer were in any degree interesting. It was next to impossible that their cousin should come in a scarlet coat, and it was now some weeks since they had received pleasure from the society of a man in any other colour. As for their mother, Mr. Collins\u2019s letter had done away much of her ill-will, and she was preparing to see him with a degree of composure which astonished her husband and daughters. Mr. Collins was punctual to his time, and was received with great politeness by the whole family. Mr. Bennet indeed said little; but the ladies were ready enough to talk, and Mr. Collins seemed neither in need of encouragement, nor inclined to be silent himself. He was a tall, heavy-looking young man of five-and-twenty. His air was grave and stately, and his manners were very formal. He had not been long seated before he complimented Mrs. Bennet on having so fine a family of daughters, said he had heard much of their beauty, but that, in this instance, fame had fallen short of the truth; and added, that he did not doubt her seeing them all in due time well disposed of in marriage. This gallantry was not much to the taste of some of his hearers; but Mrs. Bennet, who quarrelled with no compliments, answered most readily,--",
+            "required": [
+              "Mrs",
+              "Mary",
+              "Catherine",
+              "Lydia"
+            ],
+            "max_words": 64,
+            "summary": "Mary discussed a letter's composition while Mrs. Bennet prepared for Mr. Collins's visit, which Catherine and Lydia found dull. Upon his arrival, Mr. Collins was stately and formal. He complimented Mrs. Bennet on her family of daughters, addressing both Catherine and Lydia."
+          },
+          "parents": [
+            0
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 3,
+          "content": {
+            "text": "\u201cNo, my dear; I think not. I have great hopes of finding him quite the reverse. There is a mixture of servility and self-importance in his letter which promises well. I am impatient to see him.\u201d \u201cIn point of composition,\u201d said Mary, \u201chis letter does not seem defective. The idea of the olive branch perhaps is not wholly new, yet I think it is well expressed.\u201d To Catherine and Lydia neither the letter nor its writer were in any degree interesting. It was next to impossible that their cousin should come in a scarlet coat, and it was now some weeks since they had received pleasure from the society of a man in any other colour. As for their mother, Mr. Collins\u2019s letter had done away much of her ill-will, and she was preparing to see him with a degree of composure which astonished her husband and daughters. Mr. Collins was punctual to his time, and was received with great politeness by the whole family. Mr. Bennet indeed said little; but the ladies were ready enough to talk, and Mr. Collins seemed neither in need of encouragement, nor inclined to be silent himself. He was a tall, heavy-looking young man of five-and-twenty. His air was grave and stately, and his manners were very formal. He had not been long seated before he complimented Mrs. Bennet on having so fine a family of daughters, said he had heard much of their beauty, but that, in this instance, fame had fallen short of the truth; and added, that he did not doubt her seeing them all in due time well disposed of in marriage. This gallantry was not much to the taste of some of his hearers; but Mrs. Bennet, who quarrelled with no compliments, answered most readily,--",
+            "required": [
+              "Mrs",
+              "Mary",
+              "Catherine",
+              "Lydia"
+            ],
+            "max_words": 64,
+            "summary": "After discussing a man's letter\u2014which Mary found well expressed\u2014the family awaited Mr. Collins. Catherine and Lydia were disinterested in the writer, while Mrs. Bennet was surprisingly composed. Upon his arrival, Mr. Collins formally complimented her on her daughters and their marriage prospects."
+          },
+          "parents": [
+            0
+          ],
+          "operation": "generate",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "input": {
+        "text": "She said the last word with such sudden violence that Alice quite jumped; but she saw in another moment that it was addressed to the baby, and not to her, so she took courage, and went on again:\u2014 Alice did not at all like the tone of this remark, and thought it would be as well to introduce some other subject of conversation. While she was trying to fix on one, the cook took the cauldron of soup off the fire, and at once set to work throwing everything within her reach at the Duchess and the baby\u2014the fire-irons came first; then followed a shower of saucepans, plates, and dishes. The Duchess took no notice of them even when they hit her; and the baby was howling so much already, that it was quite impossible to say whether the blows hurt it or not. \u201cOh, _please_ mind what you\u2019re doing!\u201d cried Alice, jumping up and down in an agony of terror. \u201cOh, there goes his _precious_ nose!\u201d as an unusually large saucepan flew close by it, and very nearly carried it off. \u201cWhich would _not_ be an advantage,\u201d said Alice, who felt very glad to get an opportunity of showing off a little of her knowledge. \u201cJust think of what work it would make with the day and night! You see the earth takes twenty-four hours to turn round on its axis\u2014\u201d",
+        "required": [
+          "Alice",
+          "Duchess",
+          "Which",
+          "Just"
+        ],
+        "max_words": 64,
+        "summary": ""
+      },
+      "ground_truth": null,
+      "answer": {
+        "text": "She said the last word with such sudden violence that Alice quite jumped; but she saw in another moment that it was addressed to the baby, and not to her, so she took courage, and went on again:\u2014 Alice did not at all like the tone of this remark, and thought it would be as well to introduce some other subject of conversation. While she was trying to fix on one, the cook took the cauldron of soup off the fire, and at once set to work throwing everything within her reach at the Duchess and the baby\u2014the fire-irons came first; then followed a shower of saucepans, plates, and dishes. The Duchess took no notice of them even when they hit her; and the baby was howling so much already, that it was quite impossible to say whether the blows hurt it or not. \u201cOh, _please_ mind what you\u2019re doing!\u201d cried Alice, jumping up and down in an agony of terror. \u201cOh, there goes his _precious_ nose!\u201d as an unusually large saucepan flew close by it, and very nearly carried it off. \u201cWhich would _not_ be an advantage,\u201d said Alice, who felt very glad to get an opportunity of showing off a little of her knowledge. \u201cJust think of what work it would make with the day and night! You see the earth takes twenty-four hours to turn round on its axis\u2014\u201d",
+        "required": [
+          "Alice",
+          "Duchess",
+          "Which",
+          "Just"
+        ],
+        "max_words": 64,
+        "summary": "Alice grew upset when the cook began throwing pots at the Duchess and baby. Screaming in terror, Alice later lectured on physics, warning that Which would not be an advantage; she advised him to Just think of the work it would make with the day and night."
+      },
+      "routing": null,
+      "error": 0,
+      "llm_calls": 3,
+      "graph": [
+        {
+          "id": 4,
+          "content": {
+            "text": "She said the last word with such sudden violence that Alice quite jumped; but she saw in another moment that it was addressed to the baby, and not to her, so she took courage, and went on again:\u2014 Alice did not at all like the tone of this remark, and thought it would be as well to introduce some other subject of conversation. While she was trying to fix on one, the cook took the cauldron of soup off the fire, and at once set to work throwing everything within her reach at the Duchess and the baby\u2014the fire-irons came first; then followed a shower of saucepans, plates, and dishes. The Duchess took no notice of them even when they hit her; and the baby was howling so much already, that it was quite impossible to say whether the blows hurt it or not. \u201cOh, _please_ mind what you\u2019re doing!\u201d cried Alice, jumping up and down in an agony of terror. \u201cOh, there goes his _precious_ nose!\u201d as an unusually large saucepan flew close by it, and very nearly carried it off. \u201cWhich would _not_ be an advantage,\u201d said Alice, who felt very glad to get an opportunity of showing off a little of her knowledge. \u201cJust think of what work it would make with the day and night! You see the earth takes twenty-four hours to turn round on its axis\u2014\u201d",
+            "required": [
+              "Alice",
+              "Duchess",
+              "Which",
+              "Just"
+            ],
+            "max_words": 64,
+            "summary": ""
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 5,
+          "content": {
+            "text": "She said the last word with such sudden violence that Alice quite jumped; but she saw in another moment that it was addressed to the baby, and not to her, so she took courage, and went on again:\u2014 Alice did not at all like the tone of this remark, and thought it would be as well to introduce some other subject of conversation. While she was trying to fix on one, the cook took the cauldron of soup off the fire, and at once set to work throwing everything within her reach at the Duchess and the baby\u2014the fire-irons came first; then followed a shower of saucepans, plates, and dishes. The Duchess took no notice of them even when they hit her; and the baby was howling so much already, that it was quite impossible to say whether the blows hurt it or not. \u201cOh, _please_ mind what you\u2019re doing!\u201d cried Alice, jumping up and down in an agony of terror. \u201cOh, there goes his _precious_ nose!\u201d as an unusually large saucepan flew close by it, and very nearly carried it off. \u201cWhich would _not_ be an advantage,\u201d said Alice, who felt very glad to get an opportunity of showing off a little of her knowledge. \u201cJust think of what work it would make with the day and night! You see the earth takes twenty-four hours to turn round on its axis\u2014\u201d",
+            "required": [
+              "Alice",
+              "Duchess",
+              "Which",
+              "Just"
+            ],
+            "max_words": 64,
+            "summary": "Alice grew upset when the cook began throwing pots at the Duchess and baby. Screaming in terror, Alice later lectured on physics, warning that Which would not be an advantage; she advised him to Just think of the work it would make with the day and night."
+          },
+          "parents": [
+            4
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 6,
+          "content": {
+            "text": "She said the last word with such sudden violence that Alice quite jumped; but she saw in another moment that it was addressed to the baby, and not to her, so she took courage, and went on again:\u2014 Alice did not at all like the tone of this remark, and thought it would be as well to introduce some other subject of conversation. While she was trying to fix on one, the cook took the cauldron of soup off the fire, and at once set to work throwing everything within her reach at the Duchess and the baby\u2014the fire-irons came first; then followed a shower of saucepans, plates, and dishes. The Duchess took no notice of them even when they hit her; and the baby was howling so much already, that it was quite impossible to say whether the blows hurt it or not. \u201cOh, _please_ mind what you\u2019re doing!\u201d cried Alice, jumping up and down in an agony of terror. \u201cOh, there goes his _precious_ nose!\u201d as an unusually large saucepan flew close by it, and very nearly carried it off. \u201cWhich would _not_ be an advantage,\u201d said Alice, who felt very glad to get an opportunity of showing off a little of her knowledge. \u201cJust think of what work it would make with the day and night! You see the earth takes twenty-four hours to turn round on its axis\u2014\u201d",
+            "required": [
+              "Alice",
+              "Duchess",
+              "Which",
+              "Just"
+            ],
+            "max_words": 64,
+            "summary": "The cook attacked the Duchess and baby with kitchen items, causing Alice to panic. After yelling warnings, she used a scientific lecture to deflect attention, stating: \"Which would not be an advantage.\" She continued by advising, \"Just think of what work it would make with the day and night...\""
+          },
+          "parents": [
+            4
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 7,
+          "content": {
+            "text": "She said the last word with such sudden violence that Alice quite jumped; but she saw in another moment that it was addressed to the baby, and not to her, so she took courage, and went on again:\u2014 Alice did not at all like the tone of this remark, and thought it would be as well to introduce some other subject of conversation. While she was trying to fix on one, the cook took the cauldron of soup off the fire, and at once set to work throwing everything within her reach at the Duchess and the baby\u2014the fire-irons came first; then followed a shower of saucepans, plates, and dishes. The Duchess took no notice of them even when they hit her; and the baby was howling so much already, that it was quite impossible to say whether the blows hurt it or not. \u201cOh, _please_ mind what you\u2019re doing!\u201d cried Alice, jumping up and down in an agony of terror. \u201cOh, there goes his _precious_ nose!\u201d as an unusually large saucepan flew close by it, and very nearly carried it off. \u201cWhich would _not_ be an advantage,\u201d said Alice, who felt very glad to get an opportunity of showing off a little of her knowledge. \u201cJust think of what work it would make with the day and night! You see the earth takes twenty-four hours to turn round on its axis\u2014\u201d",
+            "required": [
+              "Alice",
+              "Duchess",
+              "Which",
+              "Just"
+            ],
+            "max_words": 64,
+            "summary": "When the cook assaulted the Duchess and baby with kitchen items, Alice cried out in terror. Later, she attempted to lecture everyone on astronomy, stating that what was happening \"Which would not be an advantage.\" She advised them to \"Just think of what work it would make\" with the day and night."
+          },
+          "parents": [
+            4
+          ],
+          "operation": "generate",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "input": {
+        "text": "\u201cI have answered three questions, and that is enough,\u201d Said his father; \u201cdon\u2019t give yourself airs! Do you think I can listen all day to such stuff? Be off, or I\u2019ll kick you down stairs!\u201d This time Alice waited patiently until it chose to speak again. In a minute or two the Caterpillar took the hookah out of its mouth and yawned once or twice, and shook itself. Then it got down off the mushroom, and crawled away in the grass, merely remarking as it went, \u201cOne side will make you grow taller, and the other side will make you grow shorter.\u201d Alice remained looking thoughtfully at the mushroom for a minute, trying to make out which were the two sides of it; and as it was perfectly round, she found this a very difficult question. However, at last she stretched her arms round it as far as they would go, and broke off a bit of the edge with each hand. \u201cAnd now which is which?\u201d she said to herself, and nibbled a little of the right-hand bit to try the effect: the next moment she felt a violent blow underneath her chin: it had struck her foot!",
+        "required": [
+          "Alice",
+          "Said",
+          "Caterpillar",
+          "One"
+        ],
+        "max_words": 64,
+        "summary": ""
+      },
+      "ground_truth": null,
+      "answer": {
+        "text": "\u201cI have answered three questions, and that is enough,\u201d Said his father; \u201cdon\u2019t give yourself airs! Do you think I can listen all day to such stuff? Be off, or I\u2019ll kick you down stairs!\u201d This time Alice waited patiently until it chose to speak again. In a minute or two the Caterpillar took the hookah out of its mouth and yawned once or twice, and shook itself. Then it got down off the mushroom, and crawled away in the grass, merely remarking as it went, \u201cOne side will make you grow taller, and the other side will make you grow shorter.\u201d Alice remained looking thoughtfully at the mushroom for a minute, trying to make out which were the two sides of it; and as it was perfectly round, she found this a very difficult question. However, at last she stretched her arms round it as far as they would go, and broke off a bit of the edge with each hand. \u201cAnd now which is which?\u201d she said to herself, and nibbled a little of the right-hand bit to try the effect: the next moment she felt a violent blow underneath her chin: it had struck her foot!",
+        "required": [
+          "Alice",
+          "Said",
+          "Caterpillar",
+          "One"
+        ],
+        "max_words": 64,
+        "summary": "After being scolded, Alice waited patiently until the Caterpillar spoke. The creature said that \"One side will make you grow taller, and the other side will make you grow shorter.\" Unable to tell which was which, Alice broke off pieces of the mushroom's edge, but then accidentally hit her foot."
+      },
+      "routing": null,
+      "error": 0,
+      "llm_calls": 3,
+      "graph": [
+        {
+          "id": 8,
+          "content": {
+            "text": "\u201cI have answered three questions, and that is enough,\u201d Said his father; \u201cdon\u2019t give yourself airs! Do you think I can listen all day to such stuff? Be off, or I\u2019ll kick you down stairs!\u201d This time Alice waited patiently until it chose to speak again. In a minute or two the Caterpillar took the hookah out of its mouth and yawned once or twice, and shook itself. Then it got down off the mushroom, and crawled away in the grass, merely remarking as it went, \u201cOne side will make you grow taller, and the other side will make you grow shorter.\u201d Alice remained looking thoughtfully at the mushroom for a minute, trying to make out which were the two sides of it; and as it was perfectly round, she found this a very difficult question. However, at last she stretched her arms round it as far as they would go, and broke off a bit of the edge with each hand. \u201cAnd now which is which?\u201d she said to herself, and nibbled a little of the right-hand bit to try the effect: the next moment she felt a violent blow underneath her chin: it had struck her foot!",
+            "required": [
+              "Alice",
+              "Said",
+              "Caterpillar",
+              "One"
+            ],
+            "max_words": 64,
+            "summary": ""
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 9,
+          "content": {
+            "text": "\u201cI have answered three questions, and that is enough,\u201d Said his father; \u201cdon\u2019t give yourself airs! Do you think I can listen all day to such stuff? Be off, or I\u2019ll kick you down stairs!\u201d This time Alice waited patiently until it chose to speak again. In a minute or two the Caterpillar took the hookah out of its mouth and yawned once or twice, and shook itself. Then it got down off the mushroom, and crawled away in the grass, merely remarking as it went, \u201cOne side will make you grow taller, and the other side will make you grow shorter.\u201d Alice remained looking thoughtfully at the mushroom for a minute, trying to make out which were the two sides of it; and as it was perfectly round, she found this a very difficult question. However, at last she stretched her arms round it as far as they would go, and broke off a bit of the edge with each hand. \u201cAnd now which is which?\u201d she said to herself, and nibbled a little of the right-hand bit to try the effect: the next moment she felt a violent blow underneath her chin: it had struck her foot!",
+            "required": [
+              "Alice",
+              "Said",
+              "Caterpillar",
+              "One"
+            ],
+            "max_words": 64,
+            "summary": "After being scolded, Alice waited patiently until the Caterpillar spoke. The creature said that \"One side will make you grow taller, and the other side will make you grow shorter.\" Unable to tell which was which, Alice broke off pieces of the mushroom's edge, but then accidentally hit her foot."
+          },
+          "parents": [
+            8
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 10,
+          "content": {
+            "text": "\u201cI have answered three questions, and that is enough,\u201d Said his father; \u201cdon\u2019t give yourself airs! Do you think I can listen all day to such stuff? Be off, or I\u2019ll kick you down stairs!\u201d This time Alice waited patiently until it chose to speak again. In a minute or two the Caterpillar took the hookah out of its mouth and yawned once or twice, and shook itself. Then it got down off the mushroom, and crawled away in the grass, merely remarking as it went, \u201cOne side will make you grow taller, and the other side will make you grow shorter.\u201d Alice remained looking thoughtfully at the mushroom for a minute, trying to make out which were the two sides of it; and as it was perfectly round, she found this a very difficult question. However, at last she stretched her arms round it as far as they would go, and broke off a bit of the edge with each hand. \u201cAnd now which is which?\u201d she said to herself, and nibbled a little of the right-hand bit to try the effect: the next moment she felt a violent blow underneath her chin: it had struck her foot!",
+            "required": [
+              "Alice",
+              "Said",
+              "Caterpillar",
+              "One"
+            ],
+            "max_words": 64,
+            "summary": "After being scolded by her father, Alice waited for the Caterpillar. The Caterpillar then stated that \"One side will make you grow taller, and the other side will make you grow shorter.\u201d Trying to test this theory, Alice broke off pieces. She said she couldn't tell which was correct after sampling a bit, only to accidentally strike herself with it."
+          },
+          "parents": [
+            8
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 11,
+          "content": {
+            "text": "\u201cI have answered three questions, and that is enough,\u201d Said his father; \u201cdon\u2019t give yourself airs! Do you think I can listen all day to such stuff? Be off, or I\u2019ll kick you down stairs!\u201d This time Alice waited patiently until it chose to speak again. In a minute or two the Caterpillar took the hookah out of its mouth and yawned once or twice, and shook itself. Then it got down off the mushroom, and crawled away in the grass, merely remarking as it went, \u201cOne side will make you grow taller, and the other side will make you grow shorter.\u201d Alice remained looking thoughtfully at the mushroom for a minute, trying to make out which were the two sides of it; and as it was perfectly round, she found this a very difficult question. However, at last she stretched her arms round it as far as they would go, and broke off a bit of the edge with each hand. \u201cAnd now which is which?\u201d she said to herself, and nibbled a little of the right-hand bit to try the effect: the next moment she felt a violent blow underneath her chin: it had struck her foot!",
+            "required": [
+              "Alice",
+              "Said",
+              "Caterpillar",
+              "One"
+            ],
+            "max_words": 64,
+            "summary": "After her father scolded her, Alice waited for the Caterpillar. The Caterpillar then spoke, advising that \"One side will make you grow taller, and the other side will make you grow shorter,\" it said. Confused by the round mushroom, Alice tested its pieces until she accidentally struck her foot."
+          },
+          "parents": [
+            8
+          ],
+          "operation": "generate",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "input": {
+        "text": "\u201cWhy,\u201d said the Dodo, \u201cthe best way to explain it is to do it.\u201d (And, as you might like to try the thing yourself, some winter day, I will tell you how the Dodo managed it.) First it marked out a race-course, in a sort of circle, (\u201cthe exact shape doesn\u2019t matter,\u201d it said,) and then all the party were placed along the course, here and there. There was no \u201cOne, two, three, and away,\u201d but they began running when they liked, and left off when they liked, so that it was not easy to know when the race was over. However, when they had been running half an hour or so, and were quite dry again, the Dodo suddenly called out \u201cThe race is over!\u201d and they all crowded round it, panting, and asking, \u201cBut who has won?\u201d This question the Dodo could not answer without a great deal of thought, and it sat for a long time with one finger pressed upon its forehead (the position in which you usually see Shakespeare, in the pictures of him), while the rest waited in silence. At last the Dodo said, \u201c_Everybody_ has won, and all must have prizes.\u201d \u201cWhy, _she_, of course,\u201d said the Dodo, pointing to Alice with one finger; and the whole party at once crowded round her, calling out in a confused way, \u201cPrizes! Prizes!\u201d",
+        "required": [
+          "Dodo",
+          "Why",
+          "First",
+          "One"
+        ],
+        "max_words": 64,
+        "summary": ""
+      },
+      "ground_truth": null,
+      "answer": {
+        "text": "\u201cWhy,\u201d said the Dodo, \u201cthe best way to explain it is to do it.\u201d (And, as you might like to try the thing yourself, some winter day, I will tell you how the Dodo managed it.) First it marked out a race-course, in a sort of circle, (\u201cthe exact shape doesn\u2019t matter,\u201d it said,) and then all the party were placed along the course, here and there. There was no \u201cOne, two, three, and away,\u201d but they began running when they liked, and left off when they liked, so that it was not easy to know when the race was over. However, when they had been running half an hour or so, and were quite dry again, the Dodo suddenly called out \u201cThe race is over!\u201d and they all crowded round it, panting, and asking, \u201cBut who has won?\u201d This question the Dodo could not answer without a great deal of thought, and it sat for a long time with one finger pressed upon its forehead (the position in which you usually see Shakespeare, in the pictures of him), while the rest waited in silence. At last the Dodo said, \u201c_Everybody_ has won, and all must have prizes.\u201d \u201cWhy, _she_, of course,\u201d said the Dodo, pointing to Alice with one finger; and the whole party at once crowded round her, calling out in a confused way, \u201cPrizes! Prizes!\u201d",
+        "required": [
+          "Dodo",
+          "Why",
+          "First",
+          "One"
+        ],
+        "max_words": 64,
+        "summary": "The Dodo explained why the best way to understand something was to do it. First, he marked out a race-course for the party. They ran freely until the Dodo declared it over. When asked who won, he announced that \"Everybody has won, and all must have prizes,\" pointing with one finger toward Alice."
+      },
+      "routing": null,
+      "error": 0,
+      "llm_calls": 3,
+      "graph": [
+        {
+          "id": 12,
+          "content": {
+            "text": "\u201cWhy,\u201d said the Dodo, \u201cthe best way to explain it is to do it.\u201d (And, as you might like to try the thing yourself, some winter day, I will tell you how the Dodo managed it.) First it marked out a race-course, in a sort of circle, (\u201cthe exact shape doesn\u2019t matter,\u201d it said,) and then all the party were placed along the course, here and there. There was no \u201cOne, two, three, and away,\u201d but they began running when they liked, and left off when they liked, so that it was not easy to know when the race was over. However, when they had been running half an hour or so, and were quite dry again, the Dodo suddenly called out \u201cThe race is over!\u201d and they all crowded round it, panting, and asking, \u201cBut who has won?\u201d This question the Dodo could not answer without a great deal of thought, and it sat for a long time with one finger pressed upon its forehead (the position in which you usually see Shakespeare, in the pictures of him), while the rest waited in silence. At last the Dodo said, \u201c_Everybody_ has won, and all must have prizes.\u201d \u201cWhy, _she_, of course,\u201d said the Dodo, pointing to Alice with one finger; and the whole party at once crowded round her, calling out in a confused way, \u201cPrizes! Prizes!\u201d",
+            "required": [
+              "Dodo",
+              "Why",
+              "First",
+              "One"
+            ],
+            "max_words": 64,
+            "summary": ""
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 13,
+          "content": {
+            "text": "\u201cWhy,\u201d said the Dodo, \u201cthe best way to explain it is to do it.\u201d (And, as you might like to try the thing yourself, some winter day, I will tell you how the Dodo managed it.) First it marked out a race-course, in a sort of circle, (\u201cthe exact shape doesn\u2019t matter,\u201d it said,) and then all the party were placed along the course, here and there. There was no \u201cOne, two, three, and away,\u201d but they began running when they liked, and left off when they liked, so that it was not easy to know when the race was over. However, when they had been running half an hour or so, and were quite dry again, the Dodo suddenly called out \u201cThe race is over!\u201d and they all crowded round it, panting, and asking, \u201cBut who has won?\u201d This question the Dodo could not answer without a great deal of thought, and it sat for a long time with one finger pressed upon its forehead (the position in which you usually see Shakespeare, in the pictures of him), while the rest waited in silence. At last the Dodo said, \u201c_Everybody_ has won, and all must have prizes.\u201d \u201cWhy, _she_, of course,\u201d said the Dodo, pointing to Alice with one finger; and the whole party at once crowded round her, calling out in a confused way, \u201cPrizes! Prizes!\u201d",
+            "required": [
+              "Dodo",
+              "Why",
+              "First",
+              "One"
+            ],
+            "max_words": 64,
+            "summary": "The Dodo explained why the best way to understand something was to do it. First, he marked out a race-course for the party. They ran freely until the Dodo declared it over. When asked who won, he announced that \"Everybody has won, and all must have prizes,\" pointing with one finger toward Alice."
+          },
+          "parents": [
+            12
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 14,
+          "content": {
+            "text": "\u201cWhy,\u201d said the Dodo, \u201cthe best way to explain it is to do it.\u201d (And, as you might like to try the thing yourself, some winter day, I will tell you how the Dodo managed it.) First it marked out a race-course, in a sort of circle, (\u201cthe exact shape doesn\u2019t matter,\u201d it said,) and then all the party were placed along the course, here and there. There was no \u201cOne, two, three, and away,\u201d but they began running when they liked, and left off when they liked, so that it was not easy to know when the race was over. However, when they had been running half an hour or so, and were quite dry again, the Dodo suddenly called out \u201cThe race is over!\u201d and they all crowded round it, panting, and asking, \u201cBut who has won?\u201d This question the Dodo could not answer without a great deal of thought, and it sat for a long time with one finger pressed upon its forehead (the position in which you usually see Shakespeare, in the pictures of him), while the rest waited in silence. At last the Dodo said, \u201c_Everybody_ has won, and all must have prizes.\u201d \u201cWhy, _she_, of course,\u201d said the Dodo, pointing to Alice with one finger; and the whole party at once crowded round her, calling out in a confused way, \u201cPrizes! Prizes!\u201d",
+            "required": [
+              "Dodo",
+              "Why",
+              "First",
+              "One"
+            ],
+            "max_words": 64,
+            "summary": "The Dodo explained why doing was the best way to understand it. First, they set up a circular course for an unstructured race. After running at their own pace, the Dodo declared the event over. When asked who won among the many, the Dodo announced that everybody had won, ensuring all must have prizes."
+          },
+          "parents": [
+            12
+          ],
+          "operation": "generate",
+          "score": 1
+        },
+        {
+          "id": 15,
+          "content": {
+            "text": "\u201cWhy,\u201d said the Dodo, \u201cthe best way to explain it is to do it.\u201d (And, as you might like to try the thing yourself, some winter day, I will tell you how the Dodo managed it.) First it marked out a race-course, in a sort of circle, (\u201cthe exact shape doesn\u2019t matter,\u201d it said,) and then all the party were placed along the course, here and there. There was no \u201cOne, two, three, and away,\u201d but they began running when they liked, and left off when they liked, so that it was not easy to know when the race was over. However, when they had been running half an hour or so, and were quite dry again, the Dodo suddenly called out \u201cThe race is over!\u201d and they all crowded round it, panting, and asking, \u201cBut who has won?\u201d This question the Dodo could not answer without a great deal of thought, and it sat for a long time with one finger pressed upon its forehead (the position in which you usually see Shakespeare, in the pictures of him), while the rest waited in silence. At last the Dodo said, \u201c_Everybody_ has won, and all must have prizes.\u201d \u201cWhy, _she_, of course,\u201d said the Dodo, pointing to Alice with one finger; and the whole party at once crowded round her, calling out in a confused way, \u201cPrizes! Prizes!\u201d",
+            "required": [
+              "Dodo",
+              "Why",
+              "First",
+              "One"
+            ],
+            "max_words": 64,
+            "summary": "The Dodo explained why by organizing a race. First, he marked out a circular course for the party to run on freely. When asked who had won, the Dodo declared that everybody has prizes, emphasizing that while all were winners, one person (Alice) was pointed out for special praise from the crowd."
+          },
+          "parents": [
+            12
+          ],
+          "operation": "generate",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "input": {
+        "text": "He then told her of Georgiana\u2019s delight in her acquaintance, and of her disappointment at its sudden interruption; which naturally leading to the cause of that interruption, she soon learnt that his resolution of following her from Derbyshire in quest of her sister had been formed before he quitted the inn, and that his gravity and thoughtfulness there had arisen from no other struggles than what such a purpose must comprehend. After walking several miles in a leisurely manner, and too busy to know anything about it, they found at last, on examining their watches, that it was time to be at home. \u201cWhat could have become of Mr. Bingley and Jane?\u201d was a wonder which introduced the discussion of _their_ affairs. Darcy was delighted with their engagement; his friend had given him the earliest information of it. \u201cThat is to say, you had given your permission. I guessed as much.\u201d And though he exclaimed at the term, she found that it had been pretty much the case.",
+        "required": [
+          "Georgiana",
+          "Derbyshire",
+          "Jane"
+        ],
+        "max_words": 64,
+        "summary": ""
+      },
+      "ground_truth": null,
+      "answer": {
+        "text": "He then told her of Georgiana\u2019s delight in her acquaintance, and of her disappointment at its sudden interruption; which naturally leading to the cause of that interruption, she soon learnt that his resolution of following her from Derbyshire in quest of her sister had been formed before he quitted the inn, and that his gravity and thoughtfulness there had arisen from no other struggles than what such a purpose must comprehend. After walking several miles in a leisurely manner, and too busy to know anything about it, they found at last, on examining their watches, that it was time to be at home. \u201cWhat could have become of Mr. Bingley and Jane?\u201d was a wonder which introduced the discussion of _their_ affairs. Darcy was delighted with their engagement; his friend had given him the earliest information of it. \u201cThat is to say, you had given your permission. I guessed as much.\u201d And though he exclaimed at the term, she found that it had been pretty much the case.",
+        "required": [
+          "Georgiana",
+          "Derbyshire",
+          "Jane"
+        ],
+        "max_words": 64,
+        "summary": "After discussing Georgiana\u2019s disappointment regarding an acquaintance, Darcy revealed his prior intent to follow her from Derbyshire. Later, the conversation shifted to Mr. Bingley and Jane's affairs. He was delighted by their engagement, having received early information about it."
+      },
+      "routing": null,
+      "error": 0,
+      "llm_calls": 3,
+      "graph": [
+        {
+          "id": 16,
+          "content": {
+            "text": "He then told her of Georgiana\u2019s delight in her acquaintance, and of her disappointment at its sudden interruption; which naturally leading to the cause of that interruption, she soon learnt that his resolution of following her from Derbyshire in quest of her sister had been formed before he quitted the inn, and that his gravity and thoughtfulness there had arisen from no other struggles than what such a purpose must comprehend. After walking several miles in a leisurely manner, and too busy to know anything about it, they found at last, on examining their watches, that it was time to be at home. \u201cWhat could have become of Mr. Bingley and Jane?\u201d was a wonder which introduced the discussion of _their_ affairs. Darcy was delighted with their engagement; his friend had given him the earliest information of it. \u201cThat is to say, you had given your permission. I guessed as much.\u201d And though he exclaimed at the term, she found that it had been pretty much the case.",
+            "required": [
+              "Georgiana",
+              "Derbyshire",
+              "Jane"
+            ],
+            "max_words": 64,
+            "summary": ""
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 17,
+          "content": {
+            "text": "He then told her of Georgiana\u2019s delight in her acquaintance, and of her disappointment at its sudden interruption; which naturally leading to the cause of that interruption, she soon learnt that his resolution of following her from Derbyshire in quest of her sister had been formed before he quitted the inn, and that his gravity and thoughtfulness there had arisen from no other struggles than what such a purpose must comprehend. After walking several miles in a leisurely manner, and too busy to know anything about it, they found at last, on examining their watches, that it was time to be at home. \u201cWhat could have become of Mr. Bingley and Jane?\u201d was a wonder which introduced the discussion of _their_ affairs. Darcy was delighted with their engagement; his friend had given him the earliest information of it. \u201cThat is to say, you had given your permission. I guessed as much.\u201d And though he exclaimed at the term, she found that it had been pretty much the case.",
+            "required": [
+              "Georgiana",
+              "Derbyshire",
+              "Jane"
+            ],
+            "max_words": 64,
+            "summary": "After discussing Georgiana\u2019s disappointment regarding an acquaintance, Darcy revealed his prior intent to follow her from Derbyshire. Later, the conversation shifted to Mr. Bingley and Jane's affairs. He was delighted by their engagement, having received early information about it."
+          },
+          "parents": [
+            16
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 18,
+          "content": {
+            "text": "He then told her of Georgiana\u2019s delight in her acquaintance, and of her disappointment at its sudden interruption; which naturally leading to the cause of that interruption, she soon learnt that his resolution of following her from Derbyshire in quest of her sister had been formed before he quitted the inn, and that his gravity and thoughtfulness there had arisen from no other struggles than what such a purpose must comprehend. After walking several miles in a leisurely manner, and too busy to know anything about it, they found at last, on examining their watches, that it was time to be at home. \u201cWhat could have become of Mr. Bingley and Jane?\u201d was a wonder which introduced the discussion of _their_ affairs. Darcy was delighted with their engagement; his friend had given him the earliest information of it. \u201cThat is to say, you had given your permission. I guessed as much.\u201d And though he exclaimed at the term, she found that it had been pretty much the case.",
+            "required": [
+              "Georgiana",
+              "Derbyshire",
+              "Jane"
+            ],
+            "max_words": 64,
+            "summary": "She learned about Georgiana\u2019s delight and disappointment regarding her sudden departure from Derbyshire. After walking for miles, they discussed their affairs, focusing on Bingley and Jane. Darcy expressed his happiness concerning the engagement, confirming that she had played a part in the arrangement."
+          },
+          "parents": [
+            16
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 19,
+          "content": {
+            "text": "He then told her of Georgiana\u2019s delight in her acquaintance, and of her disappointment at its sudden interruption; which naturally leading to the cause of that interruption, she soon learnt that his resolution of following her from Derbyshire in quest of her sister had been formed before he quitted the inn, and that his gravity and thoughtfulness there had arisen from no other struggles than what such a purpose must comprehend. After walking several miles in a leisurely manner, and too busy to know anything about it, they found at last, on examining their watches, that it was time to be at home. \u201cWhat could have become of Mr. Bingley and Jane?\u201d was a wonder which introduced the discussion of _their_ affairs. Darcy was delighted with their engagement; his friend had given him the earliest information of it. \u201cThat is to say, you had given your permission. I guessed as much.\u201d And though he exclaimed at the term, she found that it had been pretty much the case.",
+            "required": [
+              "Georgiana",
+              "Derbyshire",
+              "Jane"
+            ],
+            "max_words": 64,
+            "summary": "After learning about Georgiana\u2019s delight and disappointment in Derbyshire, the discussion shifted to their return home. They spoke of Mr. Bingley and Jane's affairs. Darcy was delighted by their engagement, confirming that she had essentially given her permission for the union."
+          },
+          "parents": [
+            16
+          ],
+          "operation": "generate",
+          "score": 0
+        }
+      ]
+    }
+  ]
+}

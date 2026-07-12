@@ -1,0 +1,246 @@
+{
+  "summary": {
+    "task": "extract_compute",
+    "method": "got",
+    "samples": 1,
+    "size": 32,
+    "mean_error": 0.0,
+    "solve_rate": 1.0,
+    "total_llm_calls": 4,
+    "calls_per_solved": 4.0,
+    "tokens": {
+      "provider": "lmstudio",
+      "model": "google/gemma-4-e4b",
+      "calls": 4,
+      "prompt_tokens": 511,
+      "completion_tokens": 1305
+    },
+    "seconds": 21.1
+  },
+  "records": [
+    {
+      "input": {
+        "text": "Markets were volatile throughout the period. Ember reported revenue of 765 thousand dollars this quarter. Acme posted 153 thousand dollars in sales. Krait reported revenue of 261 thousand dollars this quarter. Markets were volatile throughout the period. Bolt reported revenue of 239 thousand dollars this quarter.",
+        "expr": [
+          [
+            "+",
+            "Ember"
+          ],
+          [
+            "+",
+            "Krait"
+          ],
+          [
+            "+",
+            "Bolt"
+          ],
+          [
+            "-",
+            "Acme"
+          ]
+        ]
+      },
+      "ground_truth": 1112,
+      "answer": {
+        "text": "Markets were volatile throughout the period. Ember reported revenue of 765 thousand dollars this quarter. Acme posted 153 thousand dollars in sales. Krait reported revenue of 261 thousand dollars this quarter. Markets were volatile throughout the period. Bolt reported revenue of 239 thousand dollars this quarter.",
+        "expr": [
+          [
+            "+",
+            "Ember"
+          ],
+          [
+            "+",
+            "Krait"
+          ],
+          [
+            "+",
+            "Bolt"
+          ],
+          [
+            "-",
+            "Acme"
+          ]
+        ],
+        "values": {
+          "Ember": 765,
+          "Krait": 261,
+          "Bolt": 239,
+          "Acme": 153
+        },
+        "answer": 1112
+      },
+      "error": 0,
+      "llm_calls": 4,
+      "graph": [
+        {
+          "id": 0,
+          "content": {
+            "text": "Markets were volatile throughout the period. Ember reported revenue of 765 thousand dollars this quarter. Acme posted 153 thousand dollars in sales. Krait reported revenue of 261 thousand dollars this quarter. Markets were volatile throughout the period. Bolt reported revenue of 239 thousand dollars this quarter.",
+            "expr": [
+              [
+                "+",
+                "Ember"
+              ],
+              [
+                "+",
+                "Krait"
+              ],
+              [
+                "+",
+                "Bolt"
+              ],
+              [
+                "-",
+                "Acme"
+              ]
+            ]
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 1,
+          "content": {
+            "text": "Markets were volatile throughout the period. Ember reported revenue of 765 thousand dollars this quarter. Acme posted 153 thousand dollars in sales. Krait reported revenue of 261 thousand dollars this quarter. Markets were volatile throughout the period. Bolt reported revenue of 239 thousand dollars this quarter.",
+            "expr": [
+              [
+                "+",
+                "Ember"
+              ],
+              [
+                "+",
+                "Krait"
+              ],
+              [
+                "+",
+                "Bolt"
+              ],
+              [
+                "-",
+                "Acme"
+              ]
+            ],
+            "values": {
+              "Ember": 765,
+              "Krait": 261,
+              "Bolt": 239,
+              "Acme": 153
+            }
+          },
+          "parents": [
+            0
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 2,
+          "content": {
+            "text": "Markets were volatile throughout the period. Ember reported revenue of 765 thousand dollars this quarter. Acme posted 153 thousand dollars in sales. Krait reported revenue of 261 thousand dollars this quarter. Markets were volatile throughout the period. Bolt reported revenue of 239 thousand dollars this quarter.",
+            "expr": [
+              [
+                "+",
+                "Ember"
+              ],
+              [
+                "+",
+                "Krait"
+              ],
+              [
+                "+",
+                "Bolt"
+              ],
+              [
+                "-",
+                "Acme"
+              ]
+            ],
+            "values": {
+              "Ember": 765,
+              "Krait": 261,
+              "Bolt": 239,
+              "Acme": 153
+            }
+          },
+          "parents": [
+            0
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 3,
+          "content": {
+            "text": "Markets were volatile throughout the period. Ember reported revenue of 765 thousand dollars this quarter. Acme posted 153 thousand dollars in sales. Krait reported revenue of 261 thousand dollars this quarter. Markets were volatile throughout the period. Bolt reported revenue of 239 thousand dollars this quarter.",
+            "expr": [
+              [
+                "+",
+                "Ember"
+              ],
+              [
+                "+",
+                "Krait"
+              ],
+              [
+                "+",
+                "Bolt"
+              ],
+              [
+                "-",
+                "Acme"
+              ]
+            ],
+            "values": {
+              "Ember": 765,
+              "Krait": 261,
+              "Bolt": 239,
+              "Acme": 153
+            }
+          },
+          "parents": [
+            0
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 4,
+          "content": {
+            "text": "Markets were volatile throughout the period. Ember reported revenue of 765 thousand dollars this quarter. Acme posted 153 thousand dollars in sales. Krait reported revenue of 261 thousand dollars this quarter. Markets were volatile throughout the period. Bolt reported revenue of 239 thousand dollars this quarter.",
+            "expr": [
+              [
+                "+",
+                "Ember"
+              ],
+              [
+                "+",
+                "Krait"
+              ],
+              [
+                "+",
+                "Bolt"
+              ],
+              [
+                "-",
+                "Acme"
+              ]
+            ],
+            "values": {
+              "Ember": 765,
+              "Krait": 261,
+              "Bolt": 239,
+              "Acme": 153
+            },
+            "answer": 1112
+          },
+          "parents": [
+            1
+          ],
+          "operation": "generate",
+          "score": 0
+        }
+      ]
+    }
+  ]
+}
