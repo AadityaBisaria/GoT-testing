@@ -3,7 +3,7 @@ import os
 import re
 import urllib.request
 
-DOCS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "docs")
+DOCS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
 
 BOOKS = {
     "alice": ("https://www.gutenberg.org/files/11/11-0.txt", "Alice in Wonderland"),
