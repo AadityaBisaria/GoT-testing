@@ -2,20 +2,21 @@
   "summary": {
     "task": "constrained_writing",
     "method": "hybrid",
-    "samples": 1,
+    "samples": 5,
     "size": 32,
     "mean_error": 0.0,
     "solve_rate": 1.0,
-    "total_llm_calls": 6,
-    "calls_per_solved": 6.0,
+    "total_llm_calls": 5,
+    "calls_per_solved": 1.0,
+    "routing": null,
     "tokens": {
       "provider": "lmstudio",
       "model": "google/gemma-4-e4b",
-      "calls": 6,
-      "prompt_tokens": 523,
-      "completion_tokens": 2357
+      "calls": 5,
+      "prompt_tokens": 334,
+      "completion_tokens": 1407
     },
-    "seconds": 33.6
+    "seconds": 12.1
   },
   "records": [
     {
@@ -40,10 +41,11 @@
         "sentences": 3,
         "max_words": 64,
         "topic": "a library in winter",
-        "text": "The cold outside seemed to harbor only silence within the library's warm glow, watched by a lonely sparrow. Through the tall window, an antique lantern cast dancing shadows on stacks of forgotten tales. Inside, the scent of old paper and pine needles offered perfect sanctuary from the winter world."
+        "text": "The winter air seemed to harbor the silence of forgotten tales, broken only by a stray sparrow's chirp outside the window. A warm glow from an antique lantern cast long shadows across the polished wood floors. Inside this quiet sanctuary, knowledge offered refuge until spring arrived."
       },
+      "routing": null,
       "error": 0,
-      "llm_calls": 6,
+      "llm_calls": 1,
       "graph": [
         {
           "id": 0,
@@ -73,48 +75,274 @@
             "sentences": 3,
             "max_words": 64,
             "topic": "a library in winter",
-            "text": "The cold outside seemed to harbor only silence within the library's warm glow, watched by a lonely sparrow. Through the tall window, an antique lantern cast dancing shadows on stacks of forgotten tales. Inside, the scent of old paper and pine needles offered perfect sanctuary from the winter world."
-          },
-          "parents": [
-            0
-          ],
-          "operation": "generate",
-          "score": 0.2
-        },
-        {
-          "id": 2,
-          "content": {
-            "required": [
-              "sparrow",
-              "harbor",
-              "lantern"
-            ],
-            "sentences": 3,
-            "max_words": 64,
-            "topic": "a library in winter",
-            "text": "The winter air outside seemed to whisper through the windowpanes, while a tiny sparrow landed on the sill like an unexpected guest. Inside, the warmth of the reading room offered refuge from the cold, a quiet harbor for books and dreams. Only the gentle glow of antique lanterns illuminated the stacked shelves tonight."
+            "text": "The winter air seemed to harbor the silence of forgotten tales, broken only by a stray sparrow's chirp outside the window. A warm glow from an antique lantern cast long shadows across the polished wood floors. Inside this quiet sanctuary, knowledge offered refuge until spring arrived."
           },
           "parents": [
             0
           ],
           "operation": "generate",
           "score": 0
+        }
+      ]
+    },
+    {
+      "input": {
+        "required": [
+          "ember",
+          "compass",
+          "sparrow"
+        ],
+        "sentences": 3,
+        "max_words": 64,
+        "topic": "a small coastal town",
+        "text": ""
+      },
+      "ground_truth": null,
+      "answer": {
+        "required": [
+          "ember",
+          "compass",
+          "sparrow"
+        ],
+        "sentences": 3,
+        "max_words": 64,
+        "topic": "a small coastal town",
+        "text": "The salt-scented air of Port Blossom smelled faintly of woodsmoke and an old ember. A weathered man consulted his brass compass near the pier, watching a lone sparrow hop across the worn planks. Life here moved slowly, marked only by tides and distant gulls."
+      },
+      "routing": null,
+      "error": 0,
+      "llm_calls": 1,
+      "graph": [
+        {
+          "id": 2,
+          "content": {
+            "required": [
+              "ember",
+              "compass",
+              "sparrow"
+            ],
+            "sentences": 3,
+            "max_words": 64,
+            "topic": "a small coastal town",
+            "text": ""
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
         },
         {
           "id": 3,
           "content": {
             "required": [
-              "sparrow",
+              "ember",
+              "compass",
+              "sparrow"
+            ],
+            "sentences": 3,
+            "max_words": 64,
+            "topic": "a small coastal town",
+            "text": "The salt-scented air of Port Blossom smelled faintly of woodsmoke and an old ember. A weathered man consulted his brass compass near the pier, watching a lone sparrow hop across the worn planks. Life here moved slowly, marked only by tides and distant gulls."
+          },
+          "parents": [
+            2
+          ],
+          "operation": "generate",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "input": {
+        "required": [
+          "amber",
+          "harbor",
+          "orchard"
+        ],
+        "sentences": 3,
+        "max_words": 64,
+        "topic": "an early morning walk",
+        "text": ""
+      },
+      "ground_truth": null,
+      "answer": {
+        "required": [
+          "amber",
+          "harbor",
+          "orchard"
+        ],
+        "sentences": 3,
+        "max_words": 64,
+        "topic": "an early morning walk",
+        "text": "The dawn casts an amber glow over the quiet streets as we begin our walk. We passed by the misty harbor, watching small boats drift out to sea. The fresh air was sweet with scents from the nearby fruit-laden orchard."
+      },
+      "routing": null,
+      "error": 0,
+      "llm_calls": 1,
+      "graph": [
+        {
+          "id": 4,
+          "content": {
+            "required": [
+              "amber",
               "harbor",
+              "orchard"
+            ],
+            "sentences": 3,
+            "max_words": 64,
+            "topic": "an early morning walk",
+            "text": ""
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 5,
+          "content": {
+            "required": [
+              "amber",
+              "harbor",
+              "orchard"
+            ],
+            "sentences": 3,
+            "max_words": 64,
+            "topic": "an early morning walk",
+            "text": "The dawn casts an amber glow over the quiet streets as we begin our walk. We passed by the misty harbor, watching small boats drift out to sea. The fresh air was sweet with scents from the nearby fruit-laden orchard."
+          },
+          "parents": [
+            4
+          ],
+          "operation": "generate",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "input": {
+        "required": [
+          "tide",
+          "granite",
+          "lantern"
+        ],
+        "sentences": 3,
+        "max_words": 64,
+        "topic": "an early morning walk",
+        "text": ""
+      },
+      "ground_truth": null,
+      "answer": {
+        "required": [
+          "tide",
+          "granite",
+          "lantern"
+        ],
+        "sentences": 3,
+        "max_words": 64,
+        "topic": "an early morning walk",
+        "text": "The receding tide revealed wet shells scattered across the beach sand. We walked along the ancient granite path, lit by a single cast-iron lantern. The crisp air promised quiet introspection as dawn broke over the water."
+      },
+      "routing": null,
+      "error": 0,
+      "llm_calls": 1,
+      "graph": [
+        {
+          "id": 6,
+          "content": {
+            "required": [
+              "tide",
+              "granite",
               "lantern"
             ],
             "sentences": 3,
             "max_words": 64,
-            "topic": "a library in winter",
-            "text": "A lone sparrow searched for crumbs near the window's sill as twilight fell. Inside, the warm glow of a brass lantern seemed to harbor stories from distant lands. Winter quiet enveloped the great hall, making every turn of a page feel like an escape."
+            "topic": "an early morning walk",
+            "text": ""
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 7,
+          "content": {
+            "required": [
+              "tide",
+              "granite",
+              "lantern"
+            ],
+            "sentences": 3,
+            "max_words": 64,
+            "topic": "an early morning walk",
+            "text": "The receding tide revealed wet shells scattered across the beach sand. We walked along the ancient granite path, lit by a single cast-iron lantern. The crisp air promised quiet introspection as dawn broke over the water."
           },
           "parents": [
-            0
+            6
+          ],
+          "operation": "generate",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "input": {
+        "required": [
+          "harbor",
+          "compass",
+          "sparrow"
+        ],
+        "sentences": 3,
+        "max_words": 64,
+        "topic": "a night market",
+        "text": ""
+      },
+      "ground_truth": null,
+      "answer": {
+        "required": [
+          "harbor",
+          "compass",
+          "sparrow"
+        ],
+        "sentences": 3,
+        "max_words": 64,
+        "topic": "a night market",
+        "text": "Lanterns glowed over the bustling night market near the old harbor. A vendor consulted a tarnished brass compass, guiding customers through stalls overflowing with goods. Overhead, a tiny sparrow flitted amongst the vibrant silks."
+      },
+      "routing": null,
+      "error": 0,
+      "llm_calls": 1,
+      "graph": [
+        {
+          "id": 8,
+          "content": {
+            "required": [
+              "harbor",
+              "compass",
+              "sparrow"
+            ],
+            "sentences": 3,
+            "max_words": 64,
+            "topic": "a night market",
+            "text": ""
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 9,
+          "content": {
+            "required": [
+              "harbor",
+              "compass",
+              "sparrow"
+            ],
+            "sentences": 3,
+            "max_words": 64,
+            "topic": "a night market",
+            "text": "Lanterns glowed over the bustling night market near the old harbor. A vendor consulted a tarnished brass compass, guiding customers through stalls overflowing with goods. Overhead, a tiny sparrow flitted amongst the vibrant silks."
+          },
+          "parents": [
+            8
           ],
           "operation": "generate",
           "score": 0

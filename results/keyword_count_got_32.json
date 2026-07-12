@@ -1,0 +1,2043 @@
+{
+  "summary": {
+    "task": "keyword_count",
+    "method": "got",
+    "samples": 5,
+    "size": 32,
+    "mean_error": 0.0,
+    "solve_rate": 1.0,
+    "total_llm_calls": 105,
+    "calls_per_solved": 21.0,
+    "routing": null,
+    "tokens": {
+      "provider": "lmstudio",
+      "model": "google/gemma-4-e4b",
+      "calls": 105,
+      "prompt_tokens": 15792,
+      "completion_tokens": 56188
+    },
+    "seconds": 451.2
+  },
+  "records": [
+    {
+      "input": {
+        "text": "Travelers from Japan often visit the coast. A film festival in Egypt drew large crowds. Exports to Canada rose sharply this year. The delegation from Japan arrived on Tuesday. Travelers from Norway often visit the coast. The delegation from France arrived on Tuesday. A film festival in Canada drew large crowds. A film festival in France drew large crowds. A film festival in Norway drew large crowds. Scientists in Chile published a new study. Exports to France rose sharply this year. The team from Norway won the qualifier. Exports to Egypt rose sharply this year. The team from Canada won the qualifier. The delegation from Japan arrived on Tuesday. The delegation from Norway arrived on Tuesday. The team from India won the qualifier. Travelers from Egypt often visit the coast. The delegation from Chile arrived on Tuesday. The delegation from Norway arrived on Tuesday. The team from Egypt won the qualifier. The delegation from Canada arrived on Tuesday. A film festival in France drew large crowds. The delegation from Egypt arrived on Tuesday. The delegation from Canada arrived on Tuesday. Scientists in Norway published a new study. The team from Chile won the qualifier. The team from Brazil won the qualifier. A film festival in India drew large crowds. The delegation from Egypt arrived on Tuesday. A film festival in Brazil drew large crowds. Students traveled to Brazil for the exchange program."
+      },
+      "ground_truth": {
+        "France": 4,
+        "Japan": 3,
+        "Brazil": 3,
+        "Canada": 5,
+        "Egypt": 6,
+        "India": 2,
+        "Norway": 6,
+        "Chile": 3
+      },
+      "answer": {
+        "text": "Travelers from Japan often visit the coast. A film festival in Egypt drew large crowds. Exports to Canada rose sharply this year. The delegation from Japan arrived on Tuesday. Travelers from Norway often visit the coast. The delegation from France arrived on Tuesday. A film festival in Canada drew large crowds. A film festival in France drew large crowds. A film festival in Norway drew large crowds. Scientists in Chile published a new study. Exports to France rose sharply this year. The team from Norway won the qualifier. Exports to Egypt rose sharply this year. The team from Canada won the qualifier. The delegation from Japan arrived on Tuesday. The delegation from Norway arrived on Tuesday. The team from India won the qualifier. Travelers from Egypt often visit the coast. The delegation from Chile arrived on Tuesday. The delegation from Norway arrived on Tuesday. The team from Egypt won the qualifier. The delegation from Canada arrived on Tuesday. A film festival in France drew large crowds. The delegation from Egypt arrived on Tuesday. The delegation from Canada arrived on Tuesday. Scientists in Norway published a new study. The team from Chile won the qualifier. The team from Brazil won the qualifier. A film festival in India drew large crowds. The delegation from Egypt arrived on Tuesday. A film festival in Brazil drew large crowds. Students traveled to Brazil for the exchange program.",
+        "counts": {
+          "France": 4,
+          "Japan": 3,
+          "Brazil": 3,
+          "Canada": 5,
+          "Egypt": 6,
+          "India": 2,
+          "Norway": 6,
+          "Chile": 3
+        }
+      },
+      "routing": null,
+      "error": 0,
+      "llm_calls": 21,
+      "graph": [
+        {
+          "id": 0,
+          "content": {
+            "text": "Travelers from Japan often visit the coast. A film festival in Egypt drew large crowds. Exports to Canada rose sharply this year. The delegation from Japan arrived on Tuesday. Travelers from Norway often visit the coast. The delegation from France arrived on Tuesday. A film festival in Canada drew large crowds. A film festival in France drew large crowds. A film festival in Norway drew large crowds. Scientists in Chile published a new study. Exports to France rose sharply this year. The team from Norway won the qualifier. Exports to Egypt rose sharply this year. The team from Canada won the qualifier. The delegation from Japan arrived on Tuesday. The delegation from Norway arrived on Tuesday. The team from India won the qualifier. Travelers from Egypt often visit the coast. The delegation from Chile arrived on Tuesday. The delegation from Norway arrived on Tuesday. The team from Egypt won the qualifier. The delegation from Canada arrived on Tuesday. A film festival in France drew large crowds. The delegation from Egypt arrived on Tuesday. The delegation from Canada arrived on Tuesday. Scientists in Norway published a new study. The team from Chile won the qualifier. The team from Brazil won the qualifier. A film festival in India drew large crowds. The delegation from Egypt arrived on Tuesday. A film festival in Brazil drew large crowds. Students traveled to Brazil for the exchange program."
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 1,
+          "content": {
+            "text": "Travelers from Japan often visit the coast. A film festival in Egypt drew large crowds. Exports to Canada rose sharply this year. The delegation from Japan arrived on Tuesday. Travelers from Norway often visit the coast. The delegation from France arrived on Tuesday. A film festival in Canada drew large crowds. A film festival in France drew large crowds."
+          },
+          "parents": [
+            0
+          ],
+          "operation": "split",
+          "score": null
+        },
+        {
+          "id": 2,
+          "content": {
+            "text": "A film festival in Norway drew large crowds. Scientists in Chile published a new study. Exports to France rose sharply this year. The team from Norway won the qualifier. Exports to Egypt rose sharply this year. The team from Canada won the qualifier. The delegation from Japan arrived on Tuesday. The delegation from Norway arrived on Tuesday."
+          },
+          "parents": [
+            0
+          ],
+          "operation": "split",
+          "score": null
+        },
+        {
+          "id": 3,
+          "content": {
+            "text": "The team from India won the qualifier. Travelers from Egypt often visit the coast. The delegation from Chile arrived on Tuesday. The delegation from Norway arrived on Tuesday. The team from Egypt won the qualifier. The delegation from Canada arrived on Tuesday. A film festival in France drew large crowds. The delegation from Egypt arrived on Tuesday."
+          },
+          "parents": [
+            0
+          ],
+          "operation": "split",
+          "score": null
+        },
+        {
+          "id": 4,
+          "content": {
+            "text": "The delegation from Canada arrived on Tuesday. Scientists in Norway published a new study. The team from Chile won the qualifier. The team from Brazil won the qualifier. A film festival in India drew large crowds. The delegation from Egypt arrived on Tuesday. A film festival in Brazil drew large crowds. Students traveled to Brazil for the exchange program."
+          },
+          "parents": [
+            0
+          ],
+          "operation": "split",
+          "score": null
+        },
+        {
+          "id": 5,
+          "content": {
+            "text": "Travelers from Japan often visit the coast. A film festival in Egypt drew large crowds. Exports to Canada rose sharply this year. The delegation from Japan arrived on Tuesday. Travelers from Norway often visit the coast. The delegation from France arrived on Tuesday. A film festival in Canada drew large crowds. A film festival in France drew large crowds.",
+            "counts": {
+              "France": 2,
+              "Japan": 2,
+              "Brazil": 0,
+              "Canada": 2,
+              "Egypt": 1,
+              "India": 0,
+              "Norway": 1,
+              "Chile": 0
+            }
+          },
+          "parents": [
+            1
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 6,
+          "content": {
+            "text": "Travelers from Japan often visit the coast. A film festival in Egypt drew large crowds. Exports to Canada rose sharply this year. The delegation from Japan arrived on Tuesday. Travelers from Norway often visit the coast. The delegation from France arrived on Tuesday. A film festival in Canada drew large crowds. A film festival in France drew large crowds.",
+            "counts": {
+              "France": 2,
+              "Japan": 2,
+              "Brazil": 0,
+              "Canada": 2,
+              "Egypt": 1,
+              "India": 0,
+              "Norway": 1,
+              "Chile": 0
+            }
+          },
+          "parents": [
+            1
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 7,
+          "content": {
+            "text": "Travelers from Japan often visit the coast. A film festival in Egypt drew large crowds. Exports to Canada rose sharply this year. The delegation from Japan arrived on Tuesday. Travelers from Norway often visit the coast. The delegation from France arrived on Tuesday. A film festival in Canada drew large crowds. A film festival in France drew large crowds.",
+            "counts": {
+              "France": 2,
+              "Japan": 2,
+              "Brazil": 0,
+              "Canada": 2,
+              "Egypt": 1,
+              "India": 0,
+              "Norway": 1,
+              "Chile": 0
+            }
+          },
+          "parents": [
+            1
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 8,
+          "content": {
+            "text": "A film festival in Norway drew large crowds. Scientists in Chile published a new study. Exports to France rose sharply this year. The team from Norway won the qualifier. Exports to Egypt rose sharply this year. The team from Canada won the qualifier. The delegation from Japan arrived on Tuesday. The delegation from Norway arrived on Tuesday.",
+            "counts": {
+              "France": 1,
+              "Japan": 1,
+              "Brazil": 0,
+              "Canada": 1,
+              "Egypt": 1,
+              "India": 0,
+              "Norway": 3,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            2
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 9,
+          "content": {
+            "text": "A film festival in Norway drew large crowds. Scientists in Chile published a new study. Exports to France rose sharply this year. The team from Norway won the qualifier. Exports to Egypt rose sharply this year. The team from Canada won the qualifier. The delegation from Japan arrived on Tuesday. The delegation from Norway arrived on Tuesday.",
+            "counts": {
+              "France": 1,
+              "Japan": 1,
+              "Brazil": 0,
+              "Canada": 1,
+              "Egypt": 1,
+              "India": 0,
+              "Norway": 3,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            2
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 10,
+          "content": {
+            "text": "A film festival in Norway drew large crowds. Scientists in Chile published a new study. Exports to France rose sharply this year. The team from Norway won the qualifier. Exports to Egypt rose sharply this year. The team from Canada won the qualifier. The delegation from Japan arrived on Tuesday. The delegation from Norway arrived on Tuesday.",
+            "counts": {
+              "France": 1,
+              "Japan": 1,
+              "Brazil": 0,
+              "Canada": 1,
+              "Egypt": 1,
+              "India": 0,
+              "Norway": 3,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            2
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 11,
+          "content": {
+            "text": "The team from India won the qualifier. Travelers from Egypt often visit the coast. The delegation from Chile arrived on Tuesday. The delegation from Norway arrived on Tuesday. The team from Egypt won the qualifier. The delegation from Canada arrived on Tuesday. A film festival in France drew large crowds. The delegation from Egypt arrived on Tuesday.",
+            "counts": {
+              "France": 1,
+              "Japan": 0,
+              "Brazil": 0,
+              "Canada": 1,
+              "Egypt": 3,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            3
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 12,
+          "content": {
+            "text": "The team from India won the qualifier. Travelers from Egypt often visit the coast. The delegation from Chile arrived on Tuesday. The delegation from Norway arrived on Tuesday. The team from Egypt won the qualifier. The delegation from Canada arrived on Tuesday. A film festival in France drew large crowds. The delegation from Egypt arrived on Tuesday.",
+            "counts": {
+              "France": 1,
+              "Japan": 0,
+              "Brazil": 0,
+              "Canada": 1,
+              "Egypt": 3,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            3
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 13,
+          "content": {
+            "text": "The team from India won the qualifier. Travelers from Egypt often visit the coast. The delegation from Chile arrived on Tuesday. The delegation from Norway arrived on Tuesday. The team from Egypt won the qualifier. The delegation from Canada arrived on Tuesday. A film festival in France drew large crowds. The delegation from Egypt arrived on Tuesday.",
+            "counts": {
+              "France": 1,
+              "Japan": 0,
+              "Brazil": 0,
+              "Canada": 1,
+              "Egypt": 3,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            3
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 14,
+          "content": {
+            "text": "The delegation from Canada arrived on Tuesday. Scientists in Norway published a new study. The team from Chile won the qualifier. The team from Brazil won the qualifier. A film festival in India drew large crowds. The delegation from Egypt arrived on Tuesday. A film festival in Brazil drew large crowds. Students traveled to Brazil for the exchange program.",
+            "counts": {
+              "France": 0,
+              "Japan": 0,
+              "Brazil": 3,
+              "Canada": 1,
+              "Egypt": 1,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            4
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 15,
+          "content": {
+            "text": "The delegation from Canada arrived on Tuesday. Scientists in Norway published a new study. The team from Chile won the qualifier. The team from Brazil won the qualifier. A film festival in India drew large crowds. The delegation from Egypt arrived on Tuesday. A film festival in Brazil drew large crowds. Students traveled to Brazil for the exchange program.",
+            "counts": {
+              "France": 0,
+              "Japan": 0,
+              "Brazil": 3,
+              "Canada": 1,
+              "Egypt": 1,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            4
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 16,
+          "content": {
+            "text": "The delegation from Canada arrived on Tuesday. Scientists in Norway published a new study. The team from Chile won the qualifier. The team from Brazil won the qualifier. A film festival in India drew large crowds. The delegation from Egypt arrived on Tuesday. A film festival in Brazil drew large crowds. Students traveled to Brazil for the exchange program.",
+            "counts": {
+              "France": 0,
+              "Japan": 0,
+              "Brazil": 3,
+              "Canada": 1,
+              "Egypt": 1,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            4
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 17,
+          "content": {
+            "text": "Travelers from Japan often visit the coast. A film festival in Egypt drew large crowds. Exports to Canada rose sharply this year. The delegation from Japan arrived on Tuesday. Travelers from Norway often visit the coast. The delegation from France arrived on Tuesday. A film festival in Canada drew large crowds. A film festival in France drew large crowds. A film festival in Norway drew large crowds. Scientists in Chile published a new study. Exports to France rose sharply this year. The team from Norway won the qualifier. Exports to Egypt rose sharply this year. The team from Canada won the qualifier. The delegation from Japan arrived on Tuesday. The delegation from Norway arrived on Tuesday.",
+            "counts": {
+              "France": 3,
+              "Japan": 3,
+              "Brazil": 0,
+              "Canada": 3,
+              "Egypt": 2,
+              "India": 0,
+              "Norway": 4,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            5,
+            8
+          ],
+          "operation": "aggregate",
+          "score": 0
+        },
+        {
+          "id": 20,
+          "content": {
+            "text": "The team from India won the qualifier. Travelers from Egypt often visit the coast. The delegation from Chile arrived on Tuesday. The delegation from Norway arrived on Tuesday. The team from Egypt won the qualifier. The delegation from Canada arrived on Tuesday. A film festival in France drew large crowds. The delegation from Egypt arrived on Tuesday. The delegation from Canada arrived on Tuesday. Scientists in Norway published a new study. The team from Chile won the qualifier. The team from Brazil won the qualifier. A film festival in India drew large crowds. The delegation from Egypt arrived on Tuesday. A film festival in Brazil drew large crowds. Students traveled to Brazil for the exchange program.",
+            "counts": {
+              "France": 1,
+              "Japan": 0,
+              "Brazil": 3,
+              "Canada": 2,
+              "Egypt": 4,
+              "India": 2,
+              "Norway": 2,
+              "Chile": 2
+            }
+          },
+          "parents": [
+            11,
+            14
+          ],
+          "operation": "aggregate",
+          "score": 0
+        },
+        {
+          "id": 23,
+          "content": {
+            "text": "Travelers from Japan often visit the coast. A film festival in Egypt drew large crowds. Exports to Canada rose sharply this year. The delegation from Japan arrived on Tuesday. Travelers from Norway often visit the coast. The delegation from France arrived on Tuesday. A film festival in Canada drew large crowds. A film festival in France drew large crowds. A film festival in Norway drew large crowds. Scientists in Chile published a new study. Exports to France rose sharply this year. The team from Norway won the qualifier. Exports to Egypt rose sharply this year. The team from Canada won the qualifier. The delegation from Japan arrived on Tuesday. The delegation from Norway arrived on Tuesday. The team from India won the qualifier. Travelers from Egypt often visit the coast. The delegation from Chile arrived on Tuesday. The delegation from Norway arrived on Tuesday. The team from Egypt won the qualifier. The delegation from Canada arrived on Tuesday. A film festival in France drew large crowds. The delegation from Egypt arrived on Tuesday. The delegation from Canada arrived on Tuesday. Scientists in Norway published a new study. The team from Chile won the qualifier. The team from Brazil won the qualifier. A film festival in India drew large crowds. The delegation from Egypt arrived on Tuesday. A film festival in Brazil drew large crowds. Students traveled to Brazil for the exchange program.",
+            "counts": {
+              "France": 4,
+              "Japan": 3,
+              "Brazil": 3,
+              "Canada": 5,
+              "Egypt": 6,
+              "India": 2,
+              "Norway": 6,
+              "Chile": 3
+            }
+          },
+          "parents": [
+            17,
+            20
+          ],
+          "operation": "aggregate",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "input": {
+        "text": "Scientists in Norway published a new study. The team from Canada won the qualifier. A film festival in France drew large crowds. The team from France won the qualifier. Scientists in Norway published a new study. A film festival in Japan drew large crowds. A film festival in India drew large crowds. Cuisine from Chile is popular in the city. Exports to Chile rose sharply this year. Exports to Egypt rose sharply this year. Scientists in Canada published a new study. Cuisine from Norway is popular in the city. A film festival in India drew large crowds. Students traveled to Brazil for the exchange program. Travelers from Japan often visit the coast. Exports to Japan rose sharply this year. Cuisine from Brazil is popular in the city. Cuisine from Japan is popular in the city. Students traveled to Norway for the exchange program. Travelers from Egypt often visit the coast. Scientists in Japan published a new study. The delegation from India arrived on Tuesday. Cuisine from Egypt is popular in the city. Students traveled to Brazil for the exchange program. Scientists in France published a new study. The delegation from Brazil arrived on Tuesday. A film festival in Egypt drew large crowds. The team from Brazil won the qualifier. Travelers from Brazil often visit the coast. Students traveled to India for the exchange program. The delegation from France arrived on Tuesday. Scientists in India published a new study."
+      },
+      "ground_truth": {
+        "France": 4,
+        "Japan": 5,
+        "Brazil": 6,
+        "Canada": 2,
+        "Egypt": 4,
+        "India": 5,
+        "Norway": 4,
+        "Chile": 2
+      },
+      "answer": {
+        "text": "Scientists in Norway published a new study. The team from Canada won the qualifier. A film festival in France drew large crowds. The team from France won the qualifier. Scientists in Norway published a new study. A film festival in Japan drew large crowds. A film festival in India drew large crowds. Cuisine from Chile is popular in the city. Exports to Chile rose sharply this year. Exports to Egypt rose sharply this year. Scientists in Canada published a new study. Cuisine from Norway is popular in the city. A film festival in India drew large crowds. Students traveled to Brazil for the exchange program. Travelers from Japan often visit the coast. Exports to Japan rose sharply this year. Cuisine from Brazil is popular in the city. Cuisine from Japan is popular in the city. Students traveled to Norway for the exchange program. Travelers from Egypt often visit the coast. Scientists in Japan published a new study. The delegation from India arrived on Tuesday. Cuisine from Egypt is popular in the city. Students traveled to Brazil for the exchange program. Scientists in France published a new study. The delegation from Brazil arrived on Tuesday. A film festival in Egypt drew large crowds. The team from Brazil won the qualifier. Travelers from Brazil often visit the coast. Students traveled to India for the exchange program. The delegation from France arrived on Tuesday. Scientists in India published a new study.",
+        "counts": {
+          "France": 4,
+          "Japan": 5,
+          "Brazil": 6,
+          "Canada": 2,
+          "Egypt": 4,
+          "India": 5,
+          "Norway": 4,
+          "Chile": 2
+        }
+      },
+      "routing": null,
+      "error": 0,
+      "llm_calls": 21,
+      "graph": [
+        {
+          "id": 26,
+          "content": {
+            "text": "Scientists in Norway published a new study. The team from Canada won the qualifier. A film festival in France drew large crowds. The team from France won the qualifier. Scientists in Norway published a new study. A film festival in Japan drew large crowds. A film festival in India drew large crowds. Cuisine from Chile is popular in the city. Exports to Chile rose sharply this year. Exports to Egypt rose sharply this year. Scientists in Canada published a new study. Cuisine from Norway is popular in the city. A film festival in India drew large crowds. Students traveled to Brazil for the exchange program. Travelers from Japan often visit the coast. Exports to Japan rose sharply this year. Cuisine from Brazil is popular in the city. Cuisine from Japan is popular in the city. Students traveled to Norway for the exchange program. Travelers from Egypt often visit the coast. Scientists in Japan published a new study. The delegation from India arrived on Tuesday. Cuisine from Egypt is popular in the city. Students traveled to Brazil for the exchange program. Scientists in France published a new study. The delegation from Brazil arrived on Tuesday. A film festival in Egypt drew large crowds. The team from Brazil won the qualifier. Travelers from Brazil often visit the coast. Students traveled to India for the exchange program. The delegation from France arrived on Tuesday. Scientists in India published a new study."
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 27,
+          "content": {
+            "text": "Scientists in Norway published a new study. The team from Canada won the qualifier. A film festival in France drew large crowds. The team from France won the qualifier. Scientists in Norway published a new study. A film festival in Japan drew large crowds. A film festival in India drew large crowds. Cuisine from Chile is popular in the city."
+          },
+          "parents": [
+            26
+          ],
+          "operation": "split",
+          "score": null
+        },
+        {
+          "id": 28,
+          "content": {
+            "text": "Exports to Chile rose sharply this year. Exports to Egypt rose sharply this year. Scientists in Canada published a new study. Cuisine from Norway is popular in the city. A film festival in India drew large crowds. Students traveled to Brazil for the exchange program. Travelers from Japan often visit the coast. Exports to Japan rose sharply this year."
+          },
+          "parents": [
+            26
+          ],
+          "operation": "split",
+          "score": null
+        },
+        {
+          "id": 29,
+          "content": {
+            "text": "Cuisine from Brazil is popular in the city. Cuisine from Japan is popular in the city. Students traveled to Norway for the exchange program. Travelers from Egypt often visit the coast. Scientists in Japan published a new study. The delegation from India arrived on Tuesday. Cuisine from Egypt is popular in the city. Students traveled to Brazil for the exchange program."
+          },
+          "parents": [
+            26
+          ],
+          "operation": "split",
+          "score": null
+        },
+        {
+          "id": 30,
+          "content": {
+            "text": "Scientists in France published a new study. The delegation from Brazil arrived on Tuesday. A film festival in Egypt drew large crowds. The team from Brazil won the qualifier. Travelers from Brazil often visit the coast. Students traveled to India for the exchange program. The delegation from France arrived on Tuesday. Scientists in India published a new study."
+          },
+          "parents": [
+            26
+          ],
+          "operation": "split",
+          "score": null
+        },
+        {
+          "id": 31,
+          "content": {
+            "text": "Scientists in Norway published a new study. The team from Canada won the qualifier. A film festival in France drew large crowds. The team from France won the qualifier. Scientists in Norway published a new study. A film festival in Japan drew large crowds. A film festival in India drew large crowds. Cuisine from Chile is popular in the city.",
+            "counts": {
+              "France": 2,
+              "Japan": 1,
+              "Brazil": 0,
+              "Canada": 1,
+              "Egypt": 0,
+              "India": 1,
+              "Norway": 2,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            27
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 32,
+          "content": {
+            "text": "Scientists in Norway published a new study. The team from Canada won the qualifier. A film festival in France drew large crowds. The team from France won the qualifier. Scientists in Norway published a new study. A film festival in Japan drew large crowds. A film festival in India drew large crowds. Cuisine from Chile is popular in the city.",
+            "counts": {
+              "France": 2,
+              "Japan": 1,
+              "Brazil": 0,
+              "Canada": 1,
+              "Egypt": 0,
+              "India": 1,
+              "Norway": 2,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            27
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 33,
+          "content": {
+            "text": "Scientists in Norway published a new study. The team from Canada won the qualifier. A film festival in France drew large crowds. The team from France won the qualifier. Scientists in Norway published a new study. A film festival in Japan drew large crowds. A film festival in India drew large crowds. Cuisine from Chile is popular in the city.",
+            "counts": {
+              "France": 2,
+              "Japan": 1,
+              "Brazil": 0,
+              "Canada": 1,
+              "Egypt": 0,
+              "India": 1,
+              "Norway": 2,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            27
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 34,
+          "content": {
+            "text": "Exports to Chile rose sharply this year. Exports to Egypt rose sharply this year. Scientists in Canada published a new study. Cuisine from Norway is popular in the city. A film festival in India drew large crowds. Students traveled to Brazil for the exchange program. Travelers from Japan often visit the coast. Exports to Japan rose sharply this year.",
+            "counts": {
+              "France": 0,
+              "Japan": 2,
+              "Brazil": 1,
+              "Canada": 1,
+              "Egypt": 1,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            28
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 35,
+          "content": {
+            "text": "Exports to Chile rose sharply this year. Exports to Egypt rose sharply this year. Scientists in Canada published a new study. Cuisine from Norway is popular in the city. A film festival in India drew large crowds. Students traveled to Brazil for the exchange program. Travelers from Japan often visit the coast. Exports to Japan rose sharply this year.",
+            "counts": {
+              "France": 0,
+              "Japan": 2,
+              "Brazil": 1,
+              "Canada": 1,
+              "Egypt": 1,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            28
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 36,
+          "content": {
+            "text": "Exports to Chile rose sharply this year. Exports to Egypt rose sharply this year. Scientists in Canada published a new study. Cuisine from Norway is popular in the city. A film festival in India drew large crowds. Students traveled to Brazil for the exchange program. Travelers from Japan often visit the coast. Exports to Japan rose sharply this year.",
+            "counts": {
+              "France": 0,
+              "Japan": 2,
+              "Brazil": 1,
+              "Canada": 1,
+              "Egypt": 1,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            28
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 37,
+          "content": {
+            "text": "Cuisine from Brazil is popular in the city. Cuisine from Japan is popular in the city. Students traveled to Norway for the exchange program. Travelers from Egypt often visit the coast. Scientists in Japan published a new study. The delegation from India arrived on Tuesday. Cuisine from Egypt is popular in the city. Students traveled to Brazil for the exchange program.",
+            "counts": {
+              "France": 0,
+              "Japan": 2,
+              "Brazil": 2,
+              "Canada": 0,
+              "Egypt": 2,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 0
+            }
+          },
+          "parents": [
+            29
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 38,
+          "content": {
+            "text": "Cuisine from Brazil is popular in the city. Cuisine from Japan is popular in the city. Students traveled to Norway for the exchange program. Travelers from Egypt often visit the coast. Scientists in Japan published a new study. The delegation from India arrived on Tuesday. Cuisine from Egypt is popular in the city. Students traveled to Brazil for the exchange program.",
+            "counts": {
+              "France": 0,
+              "Japan": 2,
+              "Brazil": 2,
+              "Canada": 0,
+              "Egypt": 2,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 0
+            }
+          },
+          "parents": [
+            29
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 39,
+          "content": {
+            "text": "Cuisine from Brazil is popular in the city. Cuisine from Japan is popular in the city. Students traveled to Norway for the exchange program. Travelers from Egypt often visit the coast. Scientists in Japan published a new study. The delegation from India arrived on Tuesday. Cuisine from Egypt is popular in the city. Students traveled to Brazil for the exchange program.",
+            "counts": {
+              "France": 0,
+              "Japan": 2,
+              "Brazil": 2,
+              "Canada": 0,
+              "Egypt": 2,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 0
+            }
+          },
+          "parents": [
+            29
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 40,
+          "content": {
+            "text": "Scientists in France published a new study. The delegation from Brazil arrived on Tuesday. A film festival in Egypt drew large crowds. The team from Brazil won the qualifier. Travelers from Brazil often visit the coast. Students traveled to India for the exchange program. The delegation from France arrived on Tuesday. Scientists in India published a new study.",
+            "counts": {
+              "France": 2,
+              "Japan": 0,
+              "Brazil": 3,
+              "Canada": 0,
+              "Egypt": 1,
+              "India": 2,
+              "Norway": 0,
+              "Chile": 0
+            }
+          },
+          "parents": [
+            30
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 41,
+          "content": {
+            "text": "Scientists in France published a new study. The delegation from Brazil arrived on Tuesday. A film festival in Egypt drew large crowds. The team from Brazil won the qualifier. Travelers from Brazil often visit the coast. Students traveled to India for the exchange program. The delegation from France arrived on Tuesday. Scientists in India published a new study.",
+            "counts": {
+              "France": 2,
+              "Japan": 0,
+              "Brazil": 3,
+              "Canada": 0,
+              "Egypt": 1,
+              "India": 2,
+              "Norway": 0,
+              "Chile": 0
+            }
+          },
+          "parents": [
+            30
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 42,
+          "content": {
+            "text": "Scientists in France published a new study. The delegation from Brazil arrived on Tuesday. A film festival in Egypt drew large crowds. The team from Brazil won the qualifier. Travelers from Brazil often visit the coast. Students traveled to India for the exchange program. The delegation from France arrived on Tuesday. Scientists in India published a new study.",
+            "counts": {
+              "France": 2,
+              "Japan": 0,
+              "Brazil": 3,
+              "Canada": 0,
+              "Egypt": 1,
+              "India": 2,
+              "Norway": 0,
+              "Chile": 0
+            }
+          },
+          "parents": [
+            30
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 43,
+          "content": {
+            "text": "Scientists in Norway published a new study. The team from Canada won the qualifier. A film festival in France drew large crowds. The team from France won the qualifier. Scientists in Norway published a new study. A film festival in Japan drew large crowds. A film festival in India drew large crowds. Cuisine from Chile is popular in the city. Exports to Chile rose sharply this year. Exports to Egypt rose sharply this year. Scientists in Canada published a new study. Cuisine from Norway is popular in the city. A film festival in India drew large crowds. Students traveled to Brazil for the exchange program. Travelers from Japan often visit the coast. Exports to Japan rose sharply this year.",
+            "counts": {
+              "France": 2,
+              "Japan": 3,
+              "Brazil": 1,
+              "Canada": 2,
+              "Egypt": 1,
+              "India": 2,
+              "Norway": 3,
+              "Chile": 2
+            }
+          },
+          "parents": [
+            31,
+            34
+          ],
+          "operation": "aggregate",
+          "score": 0
+        },
+        {
+          "id": 46,
+          "content": {
+            "text": "Cuisine from Brazil is popular in the city. Cuisine from Japan is popular in the city. Students traveled to Norway for the exchange program. Travelers from Egypt often visit the coast. Scientists in Japan published a new study. The delegation from India arrived on Tuesday. Cuisine from Egypt is popular in the city. Students traveled to Brazil for the exchange program. Scientists in France published a new study. The delegation from Brazil arrived on Tuesday. A film festival in Egypt drew large crowds. The team from Brazil won the qualifier. Travelers from Brazil often visit the coast. Students traveled to India for the exchange program. The delegation from France arrived on Tuesday. Scientists in India published a new study.",
+            "counts": {
+              "France": 2,
+              "Japan": 2,
+              "Brazil": 5,
+              "Canada": 0,
+              "Egypt": 3,
+              "India": 3,
+              "Norway": 1,
+              "Chile": 0
+            }
+          },
+          "parents": [
+            37,
+            40
+          ],
+          "operation": "aggregate",
+          "score": 0
+        },
+        {
+          "id": 49,
+          "content": {
+            "text": "Scientists in Norway published a new study. The team from Canada won the qualifier. A film festival in France drew large crowds. The team from France won the qualifier. Scientists in Norway published a new study. A film festival in Japan drew large crowds. A film festival in India drew large crowds. Cuisine from Chile is popular in the city. Exports to Chile rose sharply this year. Exports to Egypt rose sharply this year. Scientists in Canada published a new study. Cuisine from Norway is popular in the city. A film festival in India drew large crowds. Students traveled to Brazil for the exchange program. Travelers from Japan often visit the coast. Exports to Japan rose sharply this year. Cuisine from Brazil is popular in the city. Cuisine from Japan is popular in the city. Students traveled to Norway for the exchange program. Travelers from Egypt often visit the coast. Scientists in Japan published a new study. The delegation from India arrived on Tuesday. Cuisine from Egypt is popular in the city. Students traveled to Brazil for the exchange program. Scientists in France published a new study. The delegation from Brazil arrived on Tuesday. A film festival in Egypt drew large crowds. The team from Brazil won the qualifier. Travelers from Brazil often visit the coast. Students traveled to India for the exchange program. The delegation from France arrived on Tuesday. Scientists in India published a new study.",
+            "counts": {
+              "France": 4,
+              "Japan": 5,
+              "Brazil": 6,
+              "Canada": 2,
+              "Egypt": 4,
+              "India": 5,
+              "Norway": 4,
+              "Chile": 2
+            }
+          },
+          "parents": [
+            43,
+            46
+          ],
+          "operation": "aggregate",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "input": {
+        "text": "Travelers from Canada often visit the coast. The delegation from Canada arrived on Tuesday. Students traveled to Japan for the exchange program. Exports to Japan rose sharply this year. Students traveled to Brazil for the exchange program. Scientists in Brazil published a new study. A film festival in Norway drew large crowds. Scientists in Canada published a new study. The team from Norway won the qualifier. Students traveled to Chile for the exchange program. A film festival in Japan drew large crowds. The delegation from Canada arrived on Tuesday. Travelers from India often visit the coast. A film festival in Canada drew large crowds. The delegation from France arrived on Tuesday. A film festival in France drew large crowds. Travelers from Japan often visit the coast. The delegation from India arrived on Tuesday. Scientists in Canada published a new study. A film festival in Chile drew large crowds. Students traveled to Brazil for the exchange program. Students traveled to Canada for the exchange program. A film festival in Norway drew large crowds. The delegation from Japan arrived on Tuesday. The team from Norway won the qualifier. Cuisine from Norway is popular in the city. Travelers from Chile often visit the coast. Travelers from Japan often visit the coast. The team from Norway won the qualifier. A film festival in Japan drew large crowds. A film festival in Canada drew large crowds. Exports to Chile rose sharply this year."
+      },
+      "ground_truth": {
+        "France": 2,
+        "Japan": 7,
+        "Brazil": 3,
+        "Canada": 8,
+        "Egypt": 0,
+        "India": 2,
+        "Norway": 6,
+        "Chile": 4
+      },
+      "answer": {
+        "text": "Travelers from Canada often visit the coast. The delegation from Canada arrived on Tuesday. Students traveled to Japan for the exchange program. Exports to Japan rose sharply this year. Students traveled to Brazil for the exchange program. Scientists in Brazil published a new study. A film festival in Norway drew large crowds. Scientists in Canada published a new study. The team from Norway won the qualifier. Students traveled to Chile for the exchange program. A film festival in Japan drew large crowds. The delegation from Canada arrived on Tuesday. Travelers from India often visit the coast. A film festival in Canada drew large crowds. The delegation from France arrived on Tuesday. A film festival in France drew large crowds. Travelers from Japan often visit the coast. The delegation from India arrived on Tuesday. Scientists in Canada published a new study. A film festival in Chile drew large crowds. Students traveled to Brazil for the exchange program. Students traveled to Canada for the exchange program. A film festival in Norway drew large crowds. The delegation from Japan arrived on Tuesday. The team from Norway won the qualifier. Cuisine from Norway is popular in the city. Travelers from Chile often visit the coast. Travelers from Japan often visit the coast. The team from Norway won the qualifier. A film festival in Japan drew large crowds. A film festival in Canada drew large crowds. Exports to Chile rose sharply this year.",
+        "counts": {
+          "France": 2,
+          "Japan": 7,
+          "Brazil": 3,
+          "Canada": 8,
+          "Egypt": 0,
+          "India": 2,
+          "Norway": 6,
+          "Chile": 4
+        }
+      },
+      "routing": null,
+      "error": 0,
+      "llm_calls": 21,
+      "graph": [
+        {
+          "id": 52,
+          "content": {
+            "text": "Travelers from Canada often visit the coast. The delegation from Canada arrived on Tuesday. Students traveled to Japan for the exchange program. Exports to Japan rose sharply this year. Students traveled to Brazil for the exchange program. Scientists in Brazil published a new study. A film festival in Norway drew large crowds. Scientists in Canada published a new study. The team from Norway won the qualifier. Students traveled to Chile for the exchange program. A film festival in Japan drew large crowds. The delegation from Canada arrived on Tuesday. Travelers from India often visit the coast. A film festival in Canada drew large crowds. The delegation from France arrived on Tuesday. A film festival in France drew large crowds. Travelers from Japan often visit the coast. The delegation from India arrived on Tuesday. Scientists in Canada published a new study. A film festival in Chile drew large crowds. Students traveled to Brazil for the exchange program. Students traveled to Canada for the exchange program. A film festival in Norway drew large crowds. The delegation from Japan arrived on Tuesday. The team from Norway won the qualifier. Cuisine from Norway is popular in the city. Travelers from Chile often visit the coast. Travelers from Japan often visit the coast. The team from Norway won the qualifier. A film festival in Japan drew large crowds. A film festival in Canada drew large crowds. Exports to Chile rose sharply this year."
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 53,
+          "content": {
+            "text": "Travelers from Canada often visit the coast. The delegation from Canada arrived on Tuesday. Students traveled to Japan for the exchange program. Exports to Japan rose sharply this year. Students traveled to Brazil for the exchange program. Scientists in Brazil published a new study. A film festival in Norway drew large crowds. Scientists in Canada published a new study."
+          },
+          "parents": [
+            52
+          ],
+          "operation": "split",
+          "score": null
+        },
+        {
+          "id": 54,
+          "content": {
+            "text": "The team from Norway won the qualifier. Students traveled to Chile for the exchange program. A film festival in Japan drew large crowds. The delegation from Canada arrived on Tuesday. Travelers from India often visit the coast. A film festival in Canada drew large crowds. The delegation from France arrived on Tuesday. A film festival in France drew large crowds."
+          },
+          "parents": [
+            52
+          ],
+          "operation": "split",
+          "score": null
+        },
+        {
+          "id": 55,
+          "content": {
+            "text": "Travelers from Japan often visit the coast. The delegation from India arrived on Tuesday. Scientists in Canada published a new study. A film festival in Chile drew large crowds. Students traveled to Brazil for the exchange program. Students traveled to Canada for the exchange program. A film festival in Norway drew large crowds. The delegation from Japan arrived on Tuesday."
+          },
+          "parents": [
+            52
+          ],
+          "operation": "split",
+          "score": null
+        },
+        {
+          "id": 56,
+          "content": {
+            "text": "The team from Norway won the qualifier. Cuisine from Norway is popular in the city. Travelers from Chile often visit the coast. Travelers from Japan often visit the coast. The team from Norway won the qualifier. A film festival in Japan drew large crowds. A film festival in Canada drew large crowds. Exports to Chile rose sharply this year."
+          },
+          "parents": [
+            52
+          ],
+          "operation": "split",
+          "score": null
+        },
+        {
+          "id": 57,
+          "content": {
+            "text": "Travelers from Canada often visit the coast. The delegation from Canada arrived on Tuesday. Students traveled to Japan for the exchange program. Exports to Japan rose sharply this year. Students traveled to Brazil for the exchange program. Scientists in Brazil published a new study. A film festival in Norway drew large crowds. Scientists in Canada published a new study.",
+            "counts": {
+              "France": 0,
+              "Japan": 2,
+              "Brazil": 2,
+              "Canada": 3,
+              "Egypt": 0,
+              "India": 0,
+              "Norway": 1,
+              "Chile": 0
+            }
+          },
+          "parents": [
+            53
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 58,
+          "content": {
+            "text": "Travelers from Canada often visit the coast. The delegation from Canada arrived on Tuesday. Students traveled to Japan for the exchange program. Exports to Japan rose sharply this year. Students traveled to Brazil for the exchange program. Scientists in Brazil published a new study. A film festival in Norway drew large crowds. Scientists in Canada published a new study.",
+            "counts": {
+              "France": 0,
+              "Japan": 2,
+              "Brazil": 2,
+              "Canada": 3,
+              "Egypt": 0,
+              "India": 0,
+              "Norway": 1,
+              "Chile": 0
+            }
+          },
+          "parents": [
+            53
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 59,
+          "content": {
+            "text": "Travelers from Canada often visit the coast. The delegation from Canada arrived on Tuesday. Students traveled to Japan for the exchange program. Exports to Japan rose sharply this year. Students traveled to Brazil for the exchange program. Scientists in Brazil published a new study. A film festival in Norway drew large crowds. Scientists in Canada published a new study.",
+            "counts": {
+              "France": 0,
+              "Japan": 2,
+              "Brazil": 2,
+              "Canada": 3,
+              "Egypt": 0,
+              "India": 0,
+              "Norway": 1,
+              "Chile": 0
+            }
+          },
+          "parents": [
+            53
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 60,
+          "content": {
+            "text": "The team from Norway won the qualifier. Students traveled to Chile for the exchange program. A film festival in Japan drew large crowds. The delegation from Canada arrived on Tuesday. Travelers from India often visit the coast. A film festival in Canada drew large crowds. The delegation from France arrived on Tuesday. A film festival in France drew large crowds.",
+            "counts": {
+              "France": 2,
+              "Japan": 1,
+              "Brazil": 0,
+              "Canada": 2,
+              "Egypt": 0,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            54
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 61,
+          "content": {
+            "text": "The team from Norway won the qualifier. Students traveled to Chile for the exchange program. A film festival in Japan drew large crowds. The delegation from Canada arrived on Tuesday. Travelers from India often visit the coast. A film festival in Canada drew large crowds. The delegation from France arrived on Tuesday. A film festival in France drew large crowds.",
+            "counts": {
+              "France": 2,
+              "Japan": 1,
+              "Brazil": 0,
+              "Canada": 2,
+              "Egypt": 0,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            54
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 62,
+          "content": {
+            "text": "The team from Norway won the qualifier. Students traveled to Chile for the exchange program. A film festival in Japan drew large crowds. The delegation from Canada arrived on Tuesday. Travelers from India often visit the coast. A film festival in Canada drew large crowds. The delegation from France arrived on Tuesday. A film festival in France drew large crowds.",
+            "counts": {
+              "France": 2,
+              "Japan": 1,
+              "Brazil": 0,
+              "Canada": 2,
+              "Egypt": 0,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            54
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 63,
+          "content": {
+            "text": "Travelers from Japan often visit the coast. The delegation from India arrived on Tuesday. Scientists in Canada published a new study. A film festival in Chile drew large crowds. Students traveled to Brazil for the exchange program. Students traveled to Canada for the exchange program. A film festival in Norway drew large crowds. The delegation from Japan arrived on Tuesday.",
+            "counts": {
+              "France": 0,
+              "Japan": 2,
+              "Brazil": 1,
+              "Canada": 2,
+              "Egypt": 0,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            55
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 64,
+          "content": {
+            "text": "Travelers from Japan often visit the coast. The delegation from India arrived on Tuesday. Scientists in Canada published a new study. A film festival in Chile drew large crowds. Students traveled to Brazil for the exchange program. Students traveled to Canada for the exchange program. A film festival in Norway drew large crowds. The delegation from Japan arrived on Tuesday.",
+            "counts": {
+              "France": 0,
+              "Japan": 2,
+              "Brazil": 1,
+              "Canada": 2,
+              "Egypt": 0,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            55
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 65,
+          "content": {
+            "text": "Travelers from Japan often visit the coast. The delegation from India arrived on Tuesday. Scientists in Canada published a new study. A film festival in Chile drew large crowds. Students traveled to Brazil for the exchange program. Students traveled to Canada for the exchange program. A film festival in Norway drew large crowds. The delegation from Japan arrived on Tuesday.",
+            "counts": {
+              "France": 0,
+              "Japan": 2,
+              "Brazil": 1,
+              "Canada": 2,
+              "Egypt": 0,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            55
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 66,
+          "content": {
+            "text": "The team from Norway won the qualifier. Cuisine from Norway is popular in the city. Travelers from Chile often visit the coast. Travelers from Japan often visit the coast. The team from Norway won the qualifier. A film festival in Japan drew large crowds. A film festival in Canada drew large crowds. Exports to Chile rose sharply this year.",
+            "counts": {
+              "France": 0,
+              "Japan": 2,
+              "Brazil": 0,
+              "Canada": 1,
+              "Egypt": 0,
+              "India": 0,
+              "Norway": 3,
+              "Chile": 2
+            }
+          },
+          "parents": [
+            56
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 67,
+          "content": {
+            "text": "The team from Norway won the qualifier. Cuisine from Norway is popular in the city. Travelers from Chile often visit the coast. Travelers from Japan often visit the coast. The team from Norway won the qualifier. A film festival in Japan drew large crowds. A film festival in Canada drew large crowds. Exports to Chile rose sharply this year.",
+            "counts": {
+              "France": 0,
+              "Japan": 2,
+              "Brazil": 0,
+              "Canada": 1,
+              "Egypt": 0,
+              "India": 0,
+              "Norway": 3,
+              "Chile": 2
+            }
+          },
+          "parents": [
+            56
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 68,
+          "content": {
+            "text": "The team from Norway won the qualifier. Cuisine from Norway is popular in the city. Travelers from Chile often visit the coast. Travelers from Japan often visit the coast. The team from Norway won the qualifier. A film festival in Japan drew large crowds. A film festival in Canada drew large crowds. Exports to Chile rose sharply this year.",
+            "counts": {
+              "France": 0,
+              "Japan": 2,
+              "Brazil": 0,
+              "Canada": 1,
+              "Egypt": 0,
+              "India": 0,
+              "Norway": 2,
+              "Chile": 2
+            }
+          },
+          "parents": [
+            56
+          ],
+          "operation": "generate",
+          "score": 1
+        },
+        {
+          "id": 69,
+          "content": {
+            "text": "Travelers from Canada often visit the coast. The delegation from Canada arrived on Tuesday. Students traveled to Japan for the exchange program. Exports to Japan rose sharply this year. Students traveled to Brazil for the exchange program. Scientists in Brazil published a new study. A film festival in Norway drew large crowds. Scientists in Canada published a new study. The team from Norway won the qualifier. Students traveled to Chile for the exchange program. A film festival in Japan drew large crowds. The delegation from Canada arrived on Tuesday. Travelers from India often visit the coast. A film festival in Canada drew large crowds. The delegation from France arrived on Tuesday. A film festival in France drew large crowds.",
+            "counts": {
+              "France": 2,
+              "Japan": 3,
+              "Brazil": 2,
+              "Canada": 5,
+              "Egypt": 0,
+              "India": 1,
+              "Norway": 2,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            57,
+            60
+          ],
+          "operation": "aggregate",
+          "score": 0
+        },
+        {
+          "id": 72,
+          "content": {
+            "text": "Travelers from Japan often visit the coast. The delegation from India arrived on Tuesday. Scientists in Canada published a new study. A film festival in Chile drew large crowds. Students traveled to Brazil for the exchange program. Students traveled to Canada for the exchange program. A film festival in Norway drew large crowds. The delegation from Japan arrived on Tuesday. The team from Norway won the qualifier. Cuisine from Norway is popular in the city. Travelers from Chile often visit the coast. Travelers from Japan often visit the coast. The team from Norway won the qualifier. A film festival in Japan drew large crowds. A film festival in Canada drew large crowds. Exports to Chile rose sharply this year.",
+            "counts": {
+              "France": 0,
+              "Japan": 4,
+              "Brazil": 1,
+              "Canada": 3,
+              "Egypt": 0,
+              "India": 1,
+              "Norway": 4,
+              "Chile": 3
+            }
+          },
+          "parents": [
+            63,
+            66
+          ],
+          "operation": "aggregate",
+          "score": 0
+        },
+        {
+          "id": 75,
+          "content": {
+            "text": "Travelers from Canada often visit the coast. The delegation from Canada arrived on Tuesday. Students traveled to Japan for the exchange program. Exports to Japan rose sharply this year. Students traveled to Brazil for the exchange program. Scientists in Brazil published a new study. A film festival in Norway drew large crowds. Scientists in Canada published a new study. The team from Norway won the qualifier. Students traveled to Chile for the exchange program. A film festival in Japan drew large crowds. The delegation from Canada arrived on Tuesday. Travelers from India often visit the coast. A film festival in Canada drew large crowds. The delegation from France arrived on Tuesday. A film festival in France drew large crowds. Travelers from Japan often visit the coast. The delegation from India arrived on Tuesday. Scientists in Canada published a new study. A film festival in Chile drew large crowds. Students traveled to Brazil for the exchange program. Students traveled to Canada for the exchange program. A film festival in Norway drew large crowds. The delegation from Japan arrived on Tuesday. The team from Norway won the qualifier. Cuisine from Norway is popular in the city. Travelers from Chile often visit the coast. Travelers from Japan often visit the coast. The team from Norway won the qualifier. A film festival in Japan drew large crowds. A film festival in Canada drew large crowds. Exports to Chile rose sharply this year.",
+            "counts": {
+              "France": 2,
+              "Japan": 7,
+              "Brazil": 3,
+              "Canada": 8,
+              "Egypt": 0,
+              "India": 2,
+              "Norway": 6,
+              "Chile": 4
+            }
+          },
+          "parents": [
+            69,
+            72
+          ],
+          "operation": "aggregate",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "input": {
+        "text": "Exports to Norway rose sharply this year. Students traveled to Egypt for the exchange program. The delegation from Canada arrived on Tuesday. The delegation from Chile arrived on Tuesday. Travelers from France often visit the coast. A film festival in Japan drew large crowds. Cuisine from Brazil is popular in the city. Students traveled to Chile for the exchange program. Cuisine from Canada is popular in the city. Exports to France rose sharply this year. Travelers from Norway often visit the coast. Scientists in Norway published a new study. Scientists in Chile published a new study. Students traveled to Norway for the exchange program. A film festival in Brazil drew large crowds. A film festival in Egypt drew large crowds. Travelers from France often visit the coast. Travelers from India often visit the coast. Students traveled to France for the exchange program. Travelers from Brazil often visit the coast. Exports to Japan rose sharply this year. The delegation from Japan arrived on Tuesday. Cuisine from Canada is popular in the city. A film festival in Japan drew large crowds. The delegation from France arrived on Tuesday. The team from Norway won the qualifier. A film festival in Egypt drew large crowds. A film festival in India drew large crowds. Cuisine from Egypt is popular in the city. Scientists in Brazil published a new study. The team from Chile won the qualifier. Travelers from Japan often visit the coast."
+      },
+      "ground_truth": {
+        "France": 5,
+        "Japan": 5,
+        "Brazil": 4,
+        "Canada": 3,
+        "Egypt": 4,
+        "India": 2,
+        "Norway": 5,
+        "Chile": 4
+      },
+      "answer": {
+        "text": "Exports to Norway rose sharply this year. Students traveled to Egypt for the exchange program. The delegation from Canada arrived on Tuesday. The delegation from Chile arrived on Tuesday. Travelers from France often visit the coast. A film festival in Japan drew large crowds. Cuisine from Brazil is popular in the city. Students traveled to Chile for the exchange program. Cuisine from Canada is popular in the city. Exports to France rose sharply this year. Travelers from Norway often visit the coast. Scientists in Norway published a new study. Scientists in Chile published a new study. Students traveled to Norway for the exchange program. A film festival in Brazil drew large crowds. A film festival in Egypt drew large crowds. Travelers from France often visit the coast. Travelers from India often visit the coast. Students traveled to France for the exchange program. Travelers from Brazil often visit the coast. Exports to Japan rose sharply this year. The delegation from Japan arrived on Tuesday. Cuisine from Canada is popular in the city. A film festival in Japan drew large crowds. The delegation from France arrived on Tuesday. The team from Norway won the qualifier. A film festival in Egypt drew large crowds. A film festival in India drew large crowds. Cuisine from Egypt is popular in the city. Scientists in Brazil published a new study. The team from Chile won the qualifier. Travelers from Japan often visit the coast.",
+        "counts": {
+          "France": 5,
+          "Japan": 5,
+          "Brazil": 4,
+          "Canada": 3,
+          "Egypt": 4,
+          "India": 2,
+          "Norway": 5,
+          "Chile": 4
+        }
+      },
+      "routing": null,
+      "error": 0,
+      "llm_calls": 21,
+      "graph": [
+        {
+          "id": 78,
+          "content": {
+            "text": "Exports to Norway rose sharply this year. Students traveled to Egypt for the exchange program. The delegation from Canada arrived on Tuesday. The delegation from Chile arrived on Tuesday. Travelers from France often visit the coast. A film festival in Japan drew large crowds. Cuisine from Brazil is popular in the city. Students traveled to Chile for the exchange program. Cuisine from Canada is popular in the city. Exports to France rose sharply this year. Travelers from Norway often visit the coast. Scientists in Norway published a new study. Scientists in Chile published a new study. Students traveled to Norway for the exchange program. A film festival in Brazil drew large crowds. A film festival in Egypt drew large crowds. Travelers from France often visit the coast. Travelers from India often visit the coast. Students traveled to France for the exchange program. Travelers from Brazil often visit the coast. Exports to Japan rose sharply this year. The delegation from Japan arrived on Tuesday. Cuisine from Canada is popular in the city. A film festival in Japan drew large crowds. The delegation from France arrived on Tuesday. The team from Norway won the qualifier. A film festival in Egypt drew large crowds. A film festival in India drew large crowds. Cuisine from Egypt is popular in the city. Scientists in Brazil published a new study. The team from Chile won the qualifier. Travelers from Japan often visit the coast."
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 79,
+          "content": {
+            "text": "Exports to Norway rose sharply this year. Students traveled to Egypt for the exchange program. The delegation from Canada arrived on Tuesday. The delegation from Chile arrived on Tuesday. Travelers from France often visit the coast. A film festival in Japan drew large crowds. Cuisine from Brazil is popular in the city. Students traveled to Chile for the exchange program."
+          },
+          "parents": [
+            78
+          ],
+          "operation": "split",
+          "score": null
+        },
+        {
+          "id": 80,
+          "content": {
+            "text": "Cuisine from Canada is popular in the city. Exports to France rose sharply this year. Travelers from Norway often visit the coast. Scientists in Norway published a new study. Scientists in Chile published a new study. Students traveled to Norway for the exchange program. A film festival in Brazil drew large crowds. A film festival in Egypt drew large crowds."
+          },
+          "parents": [
+            78
+          ],
+          "operation": "split",
+          "score": null
+        },
+        {
+          "id": 81,
+          "content": {
+            "text": "Travelers from France often visit the coast. Travelers from India often visit the coast. Students traveled to France for the exchange program. Travelers from Brazil often visit the coast. Exports to Japan rose sharply this year. The delegation from Japan arrived on Tuesday. Cuisine from Canada is popular in the city. A film festival in Japan drew large crowds."
+          },
+          "parents": [
+            78
+          ],
+          "operation": "split",
+          "score": null
+        },
+        {
+          "id": 82,
+          "content": {
+            "text": "The delegation from France arrived on Tuesday. The team from Norway won the qualifier. A film festival in Egypt drew large crowds. A film festival in India drew large crowds. Cuisine from Egypt is popular in the city. Scientists in Brazil published a new study. The team from Chile won the qualifier. Travelers from Japan often visit the coast."
+          },
+          "parents": [
+            78
+          ],
+          "operation": "split",
+          "score": null
+        },
+        {
+          "id": 83,
+          "content": {
+            "text": "Exports to Norway rose sharply this year. Students traveled to Egypt for the exchange program. The delegation from Canada arrived on Tuesday. The delegation from Chile arrived on Tuesday. Travelers from France often visit the coast. A film festival in Japan drew large crowds. Cuisine from Brazil is popular in the city. Students traveled to Chile for the exchange program.",
+            "counts": {
+              "France": 1,
+              "Japan": 1,
+              "Brazil": 1,
+              "Canada": 1,
+              "Egypt": 1,
+              "India": 0,
+              "Norway": 1,
+              "Chile": 2
+            }
+          },
+          "parents": [
+            79
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 84,
+          "content": {
+            "text": "Exports to Norway rose sharply this year. Students traveled to Egypt for the exchange program. The delegation from Canada arrived on Tuesday. The delegation from Chile arrived on Tuesday. Travelers from France often visit the coast. A film festival in Japan drew large crowds. Cuisine from Brazil is popular in the city. Students traveled to Chile for the exchange program.",
+            "counts": {
+              "France": 1,
+              "Japan": 1,
+              "Brazil": 1,
+              "Canada": 1,
+              "Egypt": 1,
+              "India": 0,
+              "Norway": 1,
+              "Chile": 2
+            }
+          },
+          "parents": [
+            79
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 85,
+          "content": {
+            "text": "Exports to Norway rose sharply this year. Students traveled to Egypt for the exchange program. The delegation from Canada arrived on Tuesday. The delegation from Chile arrived on Tuesday. Travelers from France often visit the coast. A film festival in Japan drew large crowds. Cuisine from Brazil is popular in the city. Students traveled to Chile for the exchange program.",
+            "counts": {
+              "France": 1,
+              "Japan": 1,
+              "Brazil": 1,
+              "Canada": 1,
+              "Egypt": 1,
+              "India": 0,
+              "Norway": 1,
+              "Chile": 2
+            }
+          },
+          "parents": [
+            79
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 86,
+          "content": {
+            "text": "Cuisine from Canada is popular in the city. Exports to France rose sharply this year. Travelers from Norway often visit the coast. Scientists in Norway published a new study. Scientists in Chile published a new study. Students traveled to Norway for the exchange program. A film festival in Brazil drew large crowds. A film festival in Egypt drew large crowds.",
+            "counts": {
+              "France": 1,
+              "Japan": 0,
+              "Brazil": 1,
+              "Canada": 1,
+              "Egypt": 1,
+              "India": 0,
+              "Norway": 3,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            80
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 87,
+          "content": {
+            "text": "Cuisine from Canada is popular in the city. Exports to France rose sharply this year. Travelers from Norway often visit the coast. Scientists in Norway published a new study. Scientists in Chile published a new study. Students traveled to Norway for the exchange program. A film festival in Brazil drew large crowds. A film festival in Egypt drew large crowds.",
+            "counts": {
+              "France": 1,
+              "Japan": 0,
+              "Brazil": 1,
+              "Canada": 1,
+              "Egypt": 1,
+              "India": 0,
+              "Norway": 3,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            80
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 88,
+          "content": {
+            "text": "Cuisine from Canada is popular in the city. Exports to France rose sharply this year. Travelers from Norway often visit the coast. Scientists in Norway published a new study. Scientists in Chile published a new study. Students traveled to Norway for the exchange program. A film festival in Brazil drew large crowds. A film festival in Egypt drew large crowds.",
+            "counts": {
+              "France": 1,
+              "Japan": 0,
+              "Brazil": 1,
+              "Canada": 1,
+              "Egypt": 1,
+              "India": 0,
+              "Norway": 3,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            80
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 89,
+          "content": {
+            "text": "Travelers from France often visit the coast. Travelers from India often visit the coast. Students traveled to France for the exchange program. Travelers from Brazil often visit the coast. Exports to Japan rose sharply this year. The delegation from Japan arrived on Tuesday. Cuisine from Canada is popular in the city. A film festival in Japan drew large crowds.",
+            "counts": {
+              "France": 2,
+              "Japan": 3,
+              "Brazil": 1,
+              "Canada": 1,
+              "Egypt": 0,
+              "India": 1,
+              "Norway": 0,
+              "Chile": 0
+            }
+          },
+          "parents": [
+            81
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 90,
+          "content": {
+            "text": "Travelers from France often visit the coast. Travelers from India often visit the coast. Students traveled to France for the exchange program. Travelers from Brazil often visit the coast. Exports to Japan rose sharply this year. The delegation from Japan arrived on Tuesday. Cuisine from Canada is popular in the city. A film festival in Japan drew large crowds.",
+            "counts": {
+              "France": 2,
+              "Japan": 3,
+              "Brazil": 1,
+              "Canada": 1,
+              "Egypt": 0,
+              "India": 1,
+              "Norway": 0,
+              "Chile": 0
+            }
+          },
+          "parents": [
+            81
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 91,
+          "content": {
+            "text": "Travelers from France often visit the coast. Travelers from India often visit the coast. Students traveled to France for the exchange program. Travelers from Brazil often visit the coast. Exports to Japan rose sharply this year. The delegation from Japan arrived on Tuesday. Cuisine from Canada is popular in the city. A film festival in Japan drew large crowds.",
+            "counts": {
+              "France": 2,
+              "Japan": 3,
+              "Brazil": 1,
+              "Canada": 1,
+              "Egypt": 0,
+              "India": 1,
+              "Norway": 0,
+              "Chile": 0
+            }
+          },
+          "parents": [
+            81
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 92,
+          "content": {
+            "text": "The delegation from France arrived on Tuesday. The team from Norway won the qualifier. A film festival in Egypt drew large crowds. A film festival in India drew large crowds. Cuisine from Egypt is popular in the city. Scientists in Brazil published a new study. The team from Chile won the qualifier. Travelers from Japan often visit the coast.",
+            "counts": {
+              "France": 1,
+              "Japan": 1,
+              "Brazil": 1,
+              "Canada": 0,
+              "Egypt": 2,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            82
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 93,
+          "content": {
+            "text": "The delegation from France arrived on Tuesday. The team from Norway won the qualifier. A film festival in Egypt drew large crowds. A film festival in India drew large crowds. Cuisine from Egypt is popular in the city. Scientists in Brazil published a new study. The team from Chile won the qualifier. Travelers from Japan often visit the coast.",
+            "counts": {
+              "France": 1,
+              "Japan": 1,
+              "Brazil": 1,
+              "Canada": 0,
+              "Egypt": 2,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            82
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 94,
+          "content": {
+            "text": "The delegation from France arrived on Tuesday. The team from Norway won the qualifier. A film festival in Egypt drew large crowds. A film festival in India drew large crowds. Cuisine from Egypt is popular in the city. Scientists in Brazil published a new study. The team from Chile won the qualifier. Travelers from Japan often visit the coast.",
+            "counts": {
+              "France": 1,
+              "Japan": 1,
+              "Brazil": 1,
+              "Canada": 0,
+              "Egypt": 2,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            82
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 95,
+          "content": {
+            "text": "Exports to Norway rose sharply this year. Students traveled to Egypt for the exchange program. The delegation from Canada arrived on Tuesday. The delegation from Chile arrived on Tuesday. Travelers from France often visit the coast. A film festival in Japan drew large crowds. Cuisine from Brazil is popular in the city. Students traveled to Chile for the exchange program. Cuisine from Canada is popular in the city. Exports to France rose sharply this year. Travelers from Norway often visit the coast. Scientists in Norway published a new study. Scientists in Chile published a new study. Students traveled to Norway for the exchange program. A film festival in Brazil drew large crowds. A film festival in Egypt drew large crowds.",
+            "counts": {
+              "France": 2,
+              "Japan": 1,
+              "Brazil": 2,
+              "Canada": 2,
+              "Egypt": 2,
+              "India": 0,
+              "Norway": 4,
+              "Chile": 3
+            }
+          },
+          "parents": [
+            83,
+            86
+          ],
+          "operation": "aggregate",
+          "score": 0
+        },
+        {
+          "id": 98,
+          "content": {
+            "text": "Travelers from France often visit the coast. Travelers from India often visit the coast. Students traveled to France for the exchange program. Travelers from Brazil often visit the coast. Exports to Japan rose sharply this year. The delegation from Japan arrived on Tuesday. Cuisine from Canada is popular in the city. A film festival in Japan drew large crowds. The delegation from France arrived on Tuesday. The team from Norway won the qualifier. A film festival in Egypt drew large crowds. A film festival in India drew large crowds. Cuisine from Egypt is popular in the city. Scientists in Brazil published a new study. The team from Chile won the qualifier. Travelers from Japan often visit the coast.",
+            "counts": {
+              "France": 3,
+              "Japan": 4,
+              "Brazil": 2,
+              "Canada": 1,
+              "Egypt": 2,
+              "India": 2,
+              "Norway": 1,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            89,
+            92
+          ],
+          "operation": "aggregate",
+          "score": 0
+        },
+        {
+          "id": 101,
+          "content": {
+            "text": "Exports to Norway rose sharply this year. Students traveled to Egypt for the exchange program. The delegation from Canada arrived on Tuesday. The delegation from Chile arrived on Tuesday. Travelers from France often visit the coast. A film festival in Japan drew large crowds. Cuisine from Brazil is popular in the city. Students traveled to Chile for the exchange program. Cuisine from Canada is popular in the city. Exports to France rose sharply this year. Travelers from Norway often visit the coast. Scientists in Norway published a new study. Scientists in Chile published a new study. Students traveled to Norway for the exchange program. A film festival in Brazil drew large crowds. A film festival in Egypt drew large crowds. Travelers from France often visit the coast. Travelers from India often visit the coast. Students traveled to France for the exchange program. Travelers from Brazil often visit the coast. Exports to Japan rose sharply this year. The delegation from Japan arrived on Tuesday. Cuisine from Canada is popular in the city. A film festival in Japan drew large crowds. The delegation from France arrived on Tuesday. The team from Norway won the qualifier. A film festival in Egypt drew large crowds. A film festival in India drew large crowds. Cuisine from Egypt is popular in the city. Scientists in Brazil published a new study. The team from Chile won the qualifier. Travelers from Japan often visit the coast.",
+            "counts": {
+              "France": 5,
+              "Japan": 5,
+              "Brazil": 4,
+              "Canada": 3,
+              "Egypt": 4,
+              "India": 2,
+              "Norway": 5,
+              "Chile": 4
+            }
+          },
+          "parents": [
+            95,
+            98
+          ],
+          "operation": "aggregate",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "input": {
+        "text": "The delegation from Chile arrived on Tuesday. A film festival in Japan drew large crowds. Exports to Egypt rose sharply this year. The delegation from India arrived on Tuesday. The team from Canada won the qualifier. Exports to Egypt rose sharply this year. Scientists in Chile published a new study. Scientists in France published a new study. Exports to Japan rose sharply this year. The delegation from Egypt arrived on Tuesday. Exports to Japan rose sharply this year. Scientists in Egypt published a new study. The team from Canada won the qualifier. Scientists in Canada published a new study. Scientists in Chile published a new study. The delegation from France arrived on Tuesday. Scientists in Norway published a new study. Travelers from France often visit the coast. Exports to India rose sharply this year. Exports to Egypt rose sharply this year. Cuisine from Chile is popular in the city. The delegation from France arrived on Tuesday. Exports to Japan rose sharply this year. The team from France won the qualifier. Cuisine from Brazil is popular in the city. Travelers from Brazil often visit the coast. The team from Egypt won the qualifier. The team from France won the qualifier. A film festival in Canada drew large crowds. The team from Japan won the qualifier. Exports to Norway rose sharply this year. Exports to Canada rose sharply this year."
+      },
+      "ground_truth": {
+        "France": 6,
+        "Japan": 5,
+        "Brazil": 2,
+        "Canada": 5,
+        "Egypt": 6,
+        "India": 2,
+        "Norway": 2,
+        "Chile": 4
+      },
+      "answer": {
+        "text": "The delegation from Chile arrived on Tuesday. A film festival in Japan drew large crowds. Exports to Egypt rose sharply this year. The delegation from India arrived on Tuesday. The team from Canada won the qualifier. Exports to Egypt rose sharply this year. Scientists in Chile published a new study. Scientists in France published a new study. Exports to Japan rose sharply this year. The delegation from Egypt arrived on Tuesday. Exports to Japan rose sharply this year. Scientists in Egypt published a new study. The team from Canada won the qualifier. Scientists in Canada published a new study. Scientists in Chile published a new study. The delegation from France arrived on Tuesday. Scientists in Norway published a new study. Travelers from France often visit the coast. Exports to India rose sharply this year. Exports to Egypt rose sharply this year. Cuisine from Chile is popular in the city. The delegation from France arrived on Tuesday. Exports to Japan rose sharply this year. The team from France won the qualifier. Cuisine from Brazil is popular in the city. Travelers from Brazil often visit the coast. The team from Egypt won the qualifier. The team from France won the qualifier. A film festival in Canada drew large crowds. The team from Japan won the qualifier. Exports to Norway rose sharply this year. Exports to Canada rose sharply this year.",
+        "counts": {
+          "France": 6,
+          "Japan": 5,
+          "Brazil": 2,
+          "Canada": 5,
+          "Egypt": 6,
+          "India": 2,
+          "Norway": 2,
+          "Chile": 4
+        }
+      },
+      "routing": null,
+      "error": 0,
+      "llm_calls": 21,
+      "graph": [
+        {
+          "id": 104,
+          "content": {
+            "text": "The delegation from Chile arrived on Tuesday. A film festival in Japan drew large crowds. Exports to Egypt rose sharply this year. The delegation from India arrived on Tuesday. The team from Canada won the qualifier. Exports to Egypt rose sharply this year. Scientists in Chile published a new study. Scientists in France published a new study. Exports to Japan rose sharply this year. The delegation from Egypt arrived on Tuesday. Exports to Japan rose sharply this year. Scientists in Egypt published a new study. The team from Canada won the qualifier. Scientists in Canada published a new study. Scientists in Chile published a new study. The delegation from France arrived on Tuesday. Scientists in Norway published a new study. Travelers from France often visit the coast. Exports to India rose sharply this year. Exports to Egypt rose sharply this year. Cuisine from Chile is popular in the city. The delegation from France arrived on Tuesday. Exports to Japan rose sharply this year. The team from France won the qualifier. Cuisine from Brazil is popular in the city. Travelers from Brazil often visit the coast. The team from Egypt won the qualifier. The team from France won the qualifier. A film festival in Canada drew large crowds. The team from Japan won the qualifier. Exports to Norway rose sharply this year. Exports to Canada rose sharply this year."
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 105,
+          "content": {
+            "text": "The delegation from Chile arrived on Tuesday. A film festival in Japan drew large crowds. Exports to Egypt rose sharply this year. The delegation from India arrived on Tuesday. The team from Canada won the qualifier. Exports to Egypt rose sharply this year. Scientists in Chile published a new study. Scientists in France published a new study."
+          },
+          "parents": [
+            104
+          ],
+          "operation": "split",
+          "score": null
+        },
+        {
+          "id": 106,
+          "content": {
+            "text": "Exports to Japan rose sharply this year. The delegation from Egypt arrived on Tuesday. Exports to Japan rose sharply this year. Scientists in Egypt published a new study. The team from Canada won the qualifier. Scientists in Canada published a new study. Scientists in Chile published a new study. The delegation from France arrived on Tuesday."
+          },
+          "parents": [
+            104
+          ],
+          "operation": "split",
+          "score": null
+        },
+        {
+          "id": 107,
+          "content": {
+            "text": "Scientists in Norway published a new study. Travelers from France often visit the coast. Exports to India rose sharply this year. Exports to Egypt rose sharply this year. Cuisine from Chile is popular in the city. The delegation from France arrived on Tuesday. Exports to Japan rose sharply this year. The team from France won the qualifier."
+          },
+          "parents": [
+            104
+          ],
+          "operation": "split",
+          "score": null
+        },
+        {
+          "id": 108,
+          "content": {
+            "text": "Cuisine from Brazil is popular in the city. Travelers from Brazil often visit the coast. The team from Egypt won the qualifier. The team from France won the qualifier. A film festival in Canada drew large crowds. The team from Japan won the qualifier. Exports to Norway rose sharply this year. Exports to Canada rose sharply this year."
+          },
+          "parents": [
+            104
+          ],
+          "operation": "split",
+          "score": null
+        },
+        {
+          "id": 109,
+          "content": {
+            "text": "The delegation from Chile arrived on Tuesday. A film festival in Japan drew large crowds. Exports to Egypt rose sharply this year. The delegation from India arrived on Tuesday. The team from Canada won the qualifier. Exports to Egypt rose sharply this year. Scientists in Chile published a new study. Scientists in France published a new study.",
+            "counts": {
+              "France": 1,
+              "Japan": 1,
+              "Brazil": 0,
+              "Canada": 1,
+              "Egypt": 2,
+              "India": 1,
+              "Norway": 0,
+              "Chile": 2
+            }
+          },
+          "parents": [
+            105
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 110,
+          "content": {
+            "text": "The delegation from Chile arrived on Tuesday. A film festival in Japan drew large crowds. Exports to Egypt rose sharply this year. The delegation from India arrived on Tuesday. The team from Canada won the qualifier. Exports to Egypt rose sharply this year. Scientists in Chile published a new study. Scientists in France published a new study.",
+            "counts": {
+              "France": 1,
+              "Japan": 1,
+              "Brazil": 0,
+              "Canada": 1,
+              "Egypt": 2,
+              "India": 1,
+              "Norway": 0,
+              "Chile": 2
+            }
+          },
+          "parents": [
+            105
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 111,
+          "content": {
+            "text": "The delegation from Chile arrived on Tuesday. A film festival in Japan drew large crowds. Exports to Egypt rose sharply this year. The delegation from India arrived on Tuesday. The team from Canada won the qualifier. Exports to Egypt rose sharply this year. Scientists in Chile published a new study. Scientists in France published a new study.",
+            "counts": {
+              "France": 1,
+              "Japan": 1,
+              "Brazil": 0,
+              "Canada": 1,
+              "Egypt": 2,
+              "India": 1,
+              "Norway": 0,
+              "Chile": 2
+            }
+          },
+          "parents": [
+            105
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 112,
+          "content": {
+            "text": "Exports to Japan rose sharply this year. The delegation from Egypt arrived on Tuesday. Exports to Japan rose sharply this year. Scientists in Egypt published a new study. The team from Canada won the qualifier. Scientists in Canada published a new study. Scientists in Chile published a new study. The delegation from France arrived on Tuesday.",
+            "counts": {
+              "France": 1,
+              "Japan": 2,
+              "Brazil": 0,
+              "Canada": 2,
+              "Egypt": 2,
+              "India": 0,
+              "Norway": 0,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            106
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 113,
+          "content": {
+            "text": "Exports to Japan rose sharply this year. The delegation from Egypt arrived on Tuesday. Exports to Japan rose sharply this year. Scientists in Egypt published a new study. The team from Canada won the qualifier. Scientists in Canada published a new study. Scientists in Chile published a new study. The delegation from France arrived on Tuesday.",
+            "counts": {
+              "France": 1,
+              "Japan": 2,
+              "Brazil": 0,
+              "Canada": 2,
+              "Egypt": 2,
+              "India": 0,
+              "Norway": 0,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            106
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 114,
+          "content": {
+            "text": "Exports to Japan rose sharply this year. The delegation from Egypt arrived on Tuesday. Exports to Japan rose sharply this year. Scientists in Egypt published a new study. The team from Canada won the qualifier. Scientists in Canada published a new study. Scientists in Chile published a new study. The delegation from France arrived on Tuesday.",
+            "counts": {
+              "France": 1,
+              "Japan": 2,
+              "Brazil": 0,
+              "Canada": 2,
+              "Egypt": 2,
+              "India": 0,
+              "Norway": 0,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            106
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 115,
+          "content": {
+            "text": "Scientists in Norway published a new study. Travelers from France often visit the coast. Exports to India rose sharply this year. Exports to Egypt rose sharply this year. Cuisine from Chile is popular in the city. The delegation from France arrived on Tuesday. Exports to Japan rose sharply this year. The team from France won the qualifier.",
+            "counts": {
+              "France": 3,
+              "Japan": 1,
+              "Brazil": 0,
+              "Canada": 0,
+              "Egypt": 1,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            107
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 116,
+          "content": {
+            "text": "Scientists in Norway published a new study. Travelers from France often visit the coast. Exports to India rose sharply this year. Exports to Egypt rose sharply this year. Cuisine from Chile is popular in the city. The delegation from France arrived on Tuesday. Exports to Japan rose sharply this year. The team from France won the qualifier.",
+            "counts": {
+              "France": 3,
+              "Japan": 1,
+              "Brazil": 0,
+              "Canada": 0,
+              "Egypt": 1,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            107
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 117,
+          "content": {
+            "text": "Scientists in Norway published a new study. Travelers from France often visit the coast. Exports to India rose sharply this year. Exports to Egypt rose sharply this year. Cuisine from Chile is popular in the city. The delegation from France arrived on Tuesday. Exports to Japan rose sharply this year. The team from France won the qualifier.",
+            "counts": {
+              "France": 3,
+              "Japan": 1,
+              "Brazil": 0,
+              "Canada": 0,
+              "Egypt": 1,
+              "India": 1,
+              "Norway": 1,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            107
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 118,
+          "content": {
+            "text": "Cuisine from Brazil is popular in the city. Travelers from Brazil often visit the coast. The team from Egypt won the qualifier. The team from France won the qualifier. A film festival in Canada drew large crowds. The team from Japan won the qualifier. Exports to Norway rose sharply this year. Exports to Canada rose sharply this year.",
+            "counts": {
+              "France": 1,
+              "Japan": 1,
+              "Brazil": 2,
+              "Canada": 2,
+              "Egypt": 1,
+              "India": 0,
+              "Norway": 1,
+              "Chile": 0
+            }
+          },
+          "parents": [
+            108
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 119,
+          "content": {
+            "text": "Cuisine from Brazil is popular in the city. Travelers from Brazil often visit the coast. The team from Egypt won the qualifier. The team from France won the qualifier. A film festival in Canada drew large crowds. The team from Japan won the qualifier. Exports to Norway rose sharply this year. Exports to Canada rose sharply this year.",
+            "counts": {
+              "France": 1,
+              "Japan": 1,
+              "Brazil": 2,
+              "Canada": 2,
+              "Egypt": 1,
+              "India": 0,
+              "Norway": 1,
+              "Chile": 0
+            }
+          },
+          "parents": [
+            108
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 120,
+          "content": {
+            "text": "Cuisine from Brazil is popular in the city. Travelers from Brazil often visit the coast. The team from Egypt won the qualifier. The team from France won the qualifier. A film festival in Canada drew large crowds. The team from Japan won the qualifier. Exports to Norway rose sharply this year. Exports to Canada rose sharply this year.",
+            "counts": {
+              "France": 1,
+              "Japan": 1,
+              "Brazil": 2,
+              "Canada": 2,
+              "Egypt": 1,
+              "India": 0,
+              "Norway": 1,
+              "Chile": 0
+            }
+          },
+          "parents": [
+            108
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 121,
+          "content": {
+            "text": "The delegation from Chile arrived on Tuesday. A film festival in Japan drew large crowds. Exports to Egypt rose sharply this year. The delegation from India arrived on Tuesday. The team from Canada won the qualifier. Exports to Egypt rose sharply this year. Scientists in Chile published a new study. Scientists in France published a new study. Exports to Japan rose sharply this year. The delegation from Egypt arrived on Tuesday. Exports to Japan rose sharply this year. Scientists in Egypt published a new study. The team from Canada won the qualifier. Scientists in Canada published a new study. Scientists in Chile published a new study. The delegation from France arrived on Tuesday.",
+            "counts": {
+              "France": 2,
+              "Japan": 3,
+              "Brazil": 0,
+              "Canada": 3,
+              "Egypt": 4,
+              "India": 1,
+              "Norway": 0,
+              "Chile": 3
+            }
+          },
+          "parents": [
+            109,
+            112
+          ],
+          "operation": "aggregate",
+          "score": 0
+        },
+        {
+          "id": 124,
+          "content": {
+            "text": "Scientists in Norway published a new study. Travelers from France often visit the coast. Exports to India rose sharply this year. Exports to Egypt rose sharply this year. Cuisine from Chile is popular in the city. The delegation from France arrived on Tuesday. Exports to Japan rose sharply this year. The team from France won the qualifier. Cuisine from Brazil is popular in the city. Travelers from Brazil often visit the coast. The team from Egypt won the qualifier. The team from France won the qualifier. A film festival in Canada drew large crowds. The team from Japan won the qualifier. Exports to Norway rose sharply this year. Exports to Canada rose sharply this year.",
+            "counts": {
+              "France": 4,
+              "Japan": 2,
+              "Brazil": 2,
+              "Canada": 2,
+              "Egypt": 2,
+              "India": 1,
+              "Norway": 2,
+              "Chile": 1
+            }
+          },
+          "parents": [
+            115,
+            118
+          ],
+          "operation": "aggregate",
+          "score": 0
+        },
+        {
+          "id": 127,
+          "content": {
+            "text": "The delegation from Chile arrived on Tuesday. A film festival in Japan drew large crowds. Exports to Egypt rose sharply this year. The delegation from India arrived on Tuesday. The team from Canada won the qualifier. Exports to Egypt rose sharply this year. Scientists in Chile published a new study. Scientists in France published a new study. Exports to Japan rose sharply this year. The delegation from Egypt arrived on Tuesday. Exports to Japan rose sharply this year. Scientists in Egypt published a new study. The team from Canada won the qualifier. Scientists in Canada published a new study. Scientists in Chile published a new study. The delegation from France arrived on Tuesday. Scientists in Norway published a new study. Travelers from France often visit the coast. Exports to India rose sharply this year. Exports to Egypt rose sharply this year. Cuisine from Chile is popular in the city. The delegation from France arrived on Tuesday. Exports to Japan rose sharply this year. The team from France won the qualifier. Cuisine from Brazil is popular in the city. Travelers from Brazil often visit the coast. The team from Egypt won the qualifier. The team from France won the qualifier. A film festival in Canada drew large crowds. The team from Japan won the qualifier. Exports to Norway rose sharply this year. Exports to Canada rose sharply this year.",
+            "counts": {
+              "France": 6,
+              "Japan": 5,
+              "Brazil": 2,
+              "Canada": 5,
+              "Egypt": 6,
+              "India": 2,
+              "Norway": 2,
+              "Chile": 4
+            }
+          },
+          "parents": [
+            121,
+            124
+          ],
+          "operation": "aggregate",
+          "score": 0
+        }
+      ]
+    }
+  ]
+}

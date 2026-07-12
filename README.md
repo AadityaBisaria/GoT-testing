@@ -79,38 +79,51 @@ The LLM never writes code and never relays large texts (code injects the referen
 
 ## Results
 
-Model: `google/gemma-4-e4b` (via LM Studio), 5 samples per task/method, size 32. Doc-task results below are final; the synthetic-task grid is being re-run after the fidelity fixes (earlier 3-sample results shown as v1 where noted).
+Model: `google/gemma-4-e4b` (LM Studio, Vulkan on AMD RX 9070 XT), 5 samples per task/method, size 32. Calls and tokens are totals across the 5 samples.
+
+### Synthetic tasks
+
+| Task | Method | Mean err | Solved | Calls | Tokens | Calls/solved |
+|---|---|---|---|---|---|---|
+| sorting | io | 0.40 | 60% | 5 | 4.8k | 1.7 |
+| sorting | cot | 13.00 | 0% | 5 | 9.4k | – |
+| sorting | tot | 0.20 | 80% | 22 | 31.5k | 5.5 |
+| sorting | got | 1.40 | 40% | 120 | 121.9k | 60.0 |
+| sorting | **hybrid** | **0.00** | **100%** | **20** | **4.1k** | **4.0** |
+| set_intersection | io / cot | 0.00 | 100% | 5 | 7–9k | 1.0 |
+| set_intersection | tot / hybrid | 0.00 | 100% | 20 | 13–29k | 4.0 |
+| set_intersection | got | 0.00 | 100% | 105 | 50.8k | 21.0 |
+| keyword_count | io | 1.60 | 80% | 5 | 7.3k | 1.2 |
+| keyword_count | cot | 7.40 | 60% | 5 | 9.4k | 1.7 |
+| keyword_count | tot | 0.00 | 100% | 20 | 29.6k | 4.0 |
+| keyword_count | got | 0.00 | 100% | 105 | 72.0k | 21.0 |
+| keyword_count | **hybrid** | **0.00** | **100%** | **20** | **14.0k** | **4.0** |
+| extract_compute | io / cot / hybrid | 0.00 | 100% | 5 | 1.9–3k | 1.0 |
+| extract_compute | tot / got | 0.00 | 100% | 20 | 8.4–8.7k | 4.0 |
+| constrained_writing | io / cot / hybrid | 0.00 | 100% | 5 | 1.7–2.2k | 1.0 |
+| constrained_writing | tot / got | 0.00 | 100% | 15–20 | 5–7k | 3–4 |
 
 ### Document tasks (real Gutenberg texts)
 
 | Task | Method | Mean err | Solved | Calls | Tokens |
 |---|---|---|---|---|---|
 | doc_qa | io | 0.0 | 100% | 5 | 3.3k |
-| doc_qa | cot | 0.2 | 80% | 5 | 3.8k |
-| doc_qa | got | 0.2 | 80% | 15 | 9.2k |
+| doc_qa | cot / got | 0.2 | 80% | 5 / 15 | 3.8k / 9.2k |
 | doc_qa | **hybrid (router)** | 0.2 | 80% | **6** | **3.7k** |
-| doc_summary | io | 0.0 | 100% | 5 | 4.2k |
-| doc_summary | cot | 0.0 | 100% | 5 | 3.8k |
+| doc_summary | io / cot / hybrid | 0.0 | 100% | 5 | ~4k |
 | doc_summary | got | 0.0 | 100% | 15 | 12.5k |
-| doc_summary | **hybrid** | 0.0 | 100% | **5** | **4.2k** |
 | doc_merge | io | 3.75 | 20% | 5 | 13.3k |
+| doc_merge | cot | 1.33 | 40% | 5 | 13.7k |
+| doc_merge | got | **0.00** | **100%** | 22 | 45.6k |
+| doc_merge | hybrid | 0.40 | 80% | 25 | 49.3k |
 
-### v1 results (naive GoT, before fidelity fixes, 3 samples)
+### Takeaways
 
-| Task | Method | Mean error | Solved | Calls |
-|---|---|---|---|---|
-| sorting | io | 1.33 | 0% | 3 |
-| sorting | cot | 30.67 | 0% | 3 |
-| sorting | got | 1.33 | 33% | 27 |
-| set_intersection | io/cot/got | 0.00 | 100% | 3/3/24 |
-| keyword_count | io | 1.67 | 0% | 3 |
-| keyword_count | cot/got | 0.00 | 100% | 3/24 |
-
-### Takeaways so far
-
-- **GoT structure pays only on decomposable tasks that exceed single-shot capacity** (sorting): it was the only method to fully solve instances there. On tasks the model handles in one shot, GoT's 3–8x call overhead buys nothing — matching the paper.
-- **The hybrid pattern collapses GoT's cost to ~CoT levels** while keeping its structure: 5–6 calls / ~4k tokens vs faithful GoT's 15 calls / 9–12.5k tokens on doc tasks. The savings come from three sources: deterministic merges cost 0 calls, refinement fires only on failed checks, and generation stops at the first verified candidate.
-- **Cheating fallbacks flatter GoT.** v1's merge fallback silently called `sorted()` — code was solving the task for the LLM. The faithful version uses non-solving fallbacks penalized by scoring; the honest question then becomes *which sub-steps should code own openly* — which is exactly the hybrid method.
-- **Verification asymmetry is the highest-leverage trick**: code that cannot write a constrained paragraph or summary still checks it perfectly for free, turning refinement from a blind extra pass into targeted feedback.
+- **Sorting is the headline.** Hybrid solved 5/5 at **4.1k tokens — cheaper than a single-call CoT (9.4k)** — because the LLM only sorts small chunks (terse prompts, lazy generation stops at the first verified sort) while code merges. Faithful GoT managed 40% at 30× the tokens: its pairwise LLM merges keep dropping elements even with best-of-3. Answer to "can hybrid beat pure LLM thinking on cost": yes, on tokens, when decomposition shrinks what the LLM must touch.
+- **GoT's cost explosion is real**: 105–120 calls per 5 samples on split-aggregate tasks (best-of-3 at every node). ToT is the better pure-LLM structure here — 80–100% solved at ~20 calls. GoT-with-honest-scoring only won outright on **doc_merge** (100% vs everyone else ≤80%), the task closest to the paper's motivating use case: many interdependent fuzzy pieces.
+- **The pattern by task difficulty**: model solves it in one shot → io wins (extract_compute, constrained_writing, doc_summary — all methods 100%, so cheapest wins). Model fails in one shot but the task decomposes with checkable sub-steps → **hybrid wins** (sorting, keyword_count). Task is fuzzy end-to-end with cross-piece dependencies → **got wins** (doc_merge).
+- **CoT was the worst method on decomposable structured tasks** (0% on sorting — long reasoning chains degrade into inconsistent final lists; 60% on keyword_count). Step-by-step prose is not the same as verified decomposition.
+- **Verification asymmetry is the highest-leverage trick**: code that can't produce the answer still checks it for free, which is what lets hybrid prune candidates (lazy generate), skip refinement (conditional refine), and exit pipelines early.
+- **Router safety held**: no silent wrong answers from misrouting in doc_qa; a failed deterministic route falls back loudly to the LLM path (fallback reasons logged in `results/*.json`).
 
 Full per-instance records (thought graphs, routing decisions, scores) are in `results/*.json`.

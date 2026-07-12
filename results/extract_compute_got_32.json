@@ -2,20 +2,21 @@
   "summary": {
     "task": "extract_compute",
     "method": "got",
-    "samples": 1,
+    "samples": 5,
     "size": 32,
     "mean_error": 0.0,
     "solve_rate": 1.0,
-    "total_llm_calls": 4,
+    "total_llm_calls": 20,
     "calls_per_solved": 4.0,
+    "routing": null,
     "tokens": {
       "provider": "lmstudio",
       "model": "google/gemma-4-e4b",
-      "calls": 4,
-      "prompt_tokens": 511,
-      "completion_tokens": 1305
+      "calls": 20,
+      "prompt_tokens": 2529,
+      "completion_tokens": 6219
     },
-    "seconds": 21.1
+    "seconds": 53.7
   },
   "records": [
     {
@@ -63,12 +64,13 @@
         ],
         "values": {
           "Ember": 765,
+          "Acme": 153,
           "Krait": 261,
-          "Bolt": 239,
-          "Acme": 153
+          "Bolt": 239
         },
         "answer": 1112
       },
+      "routing": null,
       "error": 0,
       "llm_calls": 4,
       "graph": [
@@ -123,9 +125,9 @@
             ],
             "values": {
               "Ember": 765,
+              "Acme": 153,
               "Krait": 261,
-              "Bolt": 239,
-              "Acme": 153
+              "Bolt": 239
             }
           },
           "parents": [
@@ -158,9 +160,9 @@
             ],
             "values": {
               "Ember": 765,
+              "Acme": 153,
               "Krait": 261,
-              "Bolt": 239,
-              "Acme": 153
+              "Bolt": 239
             }
           },
           "parents": [
@@ -193,9 +195,9 @@
             ],
             "values": {
               "Ember": 765,
+              "Acme": 153,
               "Krait": 261,
-              "Bolt": 239,
-              "Acme": 153
+              "Bolt": 239
             }
           },
           "parents": [
@@ -228,14 +230,914 @@
             ],
             "values": {
               "Ember": 765,
+              "Acme": 153,
               "Krait": 261,
-              "Bolt": 239,
-              "Acme": 153
+              "Bolt": 239
             },
             "answer": 1112
           },
           "parents": [
             1
+          ],
+          "operation": "generate",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "input": {
+        "text": "Flint posted 991 thousand dollars in sales. Crux reported revenue of 170 thousand dollars this quarter. Analysts noted Acme earned 295 thousand dollars. The overall outlook remains uncertain according to observers. Markets were volatile throughout the period. Gale reported revenue of 231 thousand dollars this quarter.",
+        "expr": [
+          [
+            "+",
+            "Acme"
+          ],
+          [
+            "+",
+            "Crux"
+          ],
+          [
+            "+",
+            "Flint"
+          ],
+          [
+            "-",
+            "Gale"
+          ]
+        ]
+      },
+      "ground_truth": 1225,
+      "answer": {
+        "text": "Flint posted 991 thousand dollars in sales. Crux reported revenue of 170 thousand dollars this quarter. Analysts noted Acme earned 295 thousand dollars. The overall outlook remains uncertain according to observers. Markets were volatile throughout the period. Gale reported revenue of 231 thousand dollars this quarter.",
+        "expr": [
+          [
+            "+",
+            "Acme"
+          ],
+          [
+            "+",
+            "Crux"
+          ],
+          [
+            "+",
+            "Flint"
+          ],
+          [
+            "-",
+            "Gale"
+          ]
+        ],
+        "values": {
+          "Acme": 295,
+          "Crux": 170,
+          "Flint": 991,
+          "Gale": 231
+        },
+        "answer": 1225
+      },
+      "routing": null,
+      "error": 0,
+      "llm_calls": 4,
+      "graph": [
+        {
+          "id": 5,
+          "content": {
+            "text": "Flint posted 991 thousand dollars in sales. Crux reported revenue of 170 thousand dollars this quarter. Analysts noted Acme earned 295 thousand dollars. The overall outlook remains uncertain according to observers. Markets were volatile throughout the period. Gale reported revenue of 231 thousand dollars this quarter.",
+            "expr": [
+              [
+                "+",
+                "Acme"
+              ],
+              [
+                "+",
+                "Crux"
+              ],
+              [
+                "+",
+                "Flint"
+              ],
+              [
+                "-",
+                "Gale"
+              ]
+            ]
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 6,
+          "content": {
+            "text": "Flint posted 991 thousand dollars in sales. Crux reported revenue of 170 thousand dollars this quarter. Analysts noted Acme earned 295 thousand dollars. The overall outlook remains uncertain according to observers. Markets were volatile throughout the period. Gale reported revenue of 231 thousand dollars this quarter.",
+            "expr": [
+              [
+                "+",
+                "Acme"
+              ],
+              [
+                "+",
+                "Crux"
+              ],
+              [
+                "+",
+                "Flint"
+              ],
+              [
+                "-",
+                "Gale"
+              ]
+            ],
+            "values": {
+              "Acme": 295,
+              "Crux": 170,
+              "Flint": 991,
+              "Gale": 231
+            }
+          },
+          "parents": [
+            5
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 7,
+          "content": {
+            "text": "Flint posted 991 thousand dollars in sales. Crux reported revenue of 170 thousand dollars this quarter. Analysts noted Acme earned 295 thousand dollars. The overall outlook remains uncertain according to observers. Markets were volatile throughout the period. Gale reported revenue of 231 thousand dollars this quarter.",
+            "expr": [
+              [
+                "+",
+                "Acme"
+              ],
+              [
+                "+",
+                "Crux"
+              ],
+              [
+                "+",
+                "Flint"
+              ],
+              [
+                "-",
+                "Gale"
+              ]
+            ],
+            "values": {
+              "Acme": 295,
+              "Crux": 170,
+              "Flint": 991,
+              "Gale": 231
+            }
+          },
+          "parents": [
+            5
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 8,
+          "content": {
+            "text": "Flint posted 991 thousand dollars in sales. Crux reported revenue of 170 thousand dollars this quarter. Analysts noted Acme earned 295 thousand dollars. The overall outlook remains uncertain according to observers. Markets were volatile throughout the period. Gale reported revenue of 231 thousand dollars this quarter.",
+            "expr": [
+              [
+                "+",
+                "Acme"
+              ],
+              [
+                "+",
+                "Crux"
+              ],
+              [
+                "+",
+                "Flint"
+              ],
+              [
+                "-",
+                "Gale"
+              ]
+            ],
+            "values": {
+              "Acme": 295,
+              "Crux": 170,
+              "Flint": 991,
+              "Gale": 231
+            }
+          },
+          "parents": [
+            5
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 9,
+          "content": {
+            "text": "Flint posted 991 thousand dollars in sales. Crux reported revenue of 170 thousand dollars this quarter. Analysts noted Acme earned 295 thousand dollars. The overall outlook remains uncertain according to observers. Markets were volatile throughout the period. Gale reported revenue of 231 thousand dollars this quarter.",
+            "expr": [
+              [
+                "+",
+                "Acme"
+              ],
+              [
+                "+",
+                "Crux"
+              ],
+              [
+                "+",
+                "Flint"
+              ],
+              [
+                "-",
+                "Gale"
+              ]
+            ],
+            "values": {
+              "Acme": 295,
+              "Crux": 170,
+              "Flint": 991,
+              "Gale": 231
+            },
+            "answer": 1225
+          },
+          "parents": [
+            6
+          ],
+          "operation": "generate",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "input": {
+        "text": "Markets were volatile throughout the period. Analysts noted Juno earned 82 thousand dollars. The Krait division brought in 732 thousand dollars. Regional trends varied considerably across segments. The Delta division brought in 688 thousand dollars. Flint reported revenue of 57 thousand dollars this quarter.",
+        "expr": [
+          [
+            "+",
+            "Flint"
+          ],
+          [
+            "+",
+            "Krait"
+          ],
+          [
+            "+",
+            "Juno"
+          ],
+          [
+            "-",
+            "Delta"
+          ]
+        ]
+      },
+      "ground_truth": 183,
+      "answer": {
+        "text": "Markets were volatile throughout the period. Analysts noted Juno earned 82 thousand dollars. The Krait division brought in 732 thousand dollars. Regional trends varied considerably across segments. The Delta division brought in 688 thousand dollars. Flint reported revenue of 57 thousand dollars this quarter.",
+        "expr": [
+          [
+            "+",
+            "Flint"
+          ],
+          [
+            "+",
+            "Krait"
+          ],
+          [
+            "+",
+            "Juno"
+          ],
+          [
+            "-",
+            "Delta"
+          ]
+        ],
+        "values": {
+          "Flint": 57,
+          "Krait": 732,
+          "Juno": 82,
+          "Delta": 688
+        },
+        "answer": 183
+      },
+      "routing": null,
+      "error": 0,
+      "llm_calls": 4,
+      "graph": [
+        {
+          "id": 10,
+          "content": {
+            "text": "Markets were volatile throughout the period. Analysts noted Juno earned 82 thousand dollars. The Krait division brought in 732 thousand dollars. Regional trends varied considerably across segments. The Delta division brought in 688 thousand dollars. Flint reported revenue of 57 thousand dollars this quarter.",
+            "expr": [
+              [
+                "+",
+                "Flint"
+              ],
+              [
+                "+",
+                "Krait"
+              ],
+              [
+                "+",
+                "Juno"
+              ],
+              [
+                "-",
+                "Delta"
+              ]
+            ]
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 11,
+          "content": {
+            "text": "Markets were volatile throughout the period. Analysts noted Juno earned 82 thousand dollars. The Krait division brought in 732 thousand dollars. Regional trends varied considerably across segments. The Delta division brought in 688 thousand dollars. Flint reported revenue of 57 thousand dollars this quarter.",
+            "expr": [
+              [
+                "+",
+                "Flint"
+              ],
+              [
+                "+",
+                "Krait"
+              ],
+              [
+                "+",
+                "Juno"
+              ],
+              [
+                "-",
+                "Delta"
+              ]
+            ],
+            "values": {
+              "Flint": 57,
+              "Krait": 732,
+              "Juno": 82,
+              "Delta": 688
+            }
+          },
+          "parents": [
+            10
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 12,
+          "content": {
+            "text": "Markets were volatile throughout the period. Analysts noted Juno earned 82 thousand dollars. The Krait division brought in 732 thousand dollars. Regional trends varied considerably across segments. The Delta division brought in 688 thousand dollars. Flint reported revenue of 57 thousand dollars this quarter.",
+            "expr": [
+              [
+                "+",
+                "Flint"
+              ],
+              [
+                "+",
+                "Krait"
+              ],
+              [
+                "+",
+                "Juno"
+              ],
+              [
+                "-",
+                "Delta"
+              ]
+            ],
+            "values": {
+              "Flint": 57,
+              "Krait": 732,
+              "Juno": 82,
+              "Delta": 688
+            }
+          },
+          "parents": [
+            10
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 13,
+          "content": {
+            "text": "Markets were volatile throughout the period. Analysts noted Juno earned 82 thousand dollars. The Krait division brought in 732 thousand dollars. Regional trends varied considerably across segments. The Delta division brought in 688 thousand dollars. Flint reported revenue of 57 thousand dollars this quarter.",
+            "expr": [
+              [
+                "+",
+                "Flint"
+              ],
+              [
+                "+",
+                "Krait"
+              ],
+              [
+                "+",
+                "Juno"
+              ],
+              [
+                "-",
+                "Delta"
+              ]
+            ],
+            "values": {
+              "Flint": 57,
+              "Krait": 732,
+              "Juno": 82,
+              "Delta": 688
+            }
+          },
+          "parents": [
+            10
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 14,
+          "content": {
+            "text": "Markets were volatile throughout the period. Analysts noted Juno earned 82 thousand dollars. The Krait division brought in 732 thousand dollars. Regional trends varied considerably across segments. The Delta division brought in 688 thousand dollars. Flint reported revenue of 57 thousand dollars this quarter.",
+            "expr": [
+              [
+                "+",
+                "Flint"
+              ],
+              [
+                "+",
+                "Krait"
+              ],
+              [
+                "+",
+                "Juno"
+              ],
+              [
+                "-",
+                "Delta"
+              ]
+            ],
+            "values": {
+              "Flint": 57,
+              "Krait": 732,
+              "Juno": 82,
+              "Delta": 688
+            },
+            "answer": 183
+          },
+          "parents": [
+            11
+          ],
+          "operation": "generate",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "input": {
+        "text": "Markets were volatile throughout the period. Several executives commented on supply chain issues. Analysts noted Krait earned 261 thousand dollars. Analysts noted Iris earned 484 thousand dollars. The Crux division brought in 178 thousand dollars. Juno posted 757 thousand dollars in sales.",
+        "expr": [
+          [
+            "+",
+            "Krait"
+          ],
+          [
+            "+",
+            "Crux"
+          ],
+          [
+            "+",
+            "Iris"
+          ],
+          [
+            "-",
+            "Juno"
+          ]
+        ]
+      },
+      "ground_truth": 166,
+      "answer": {
+        "text": "Markets were volatile throughout the period. Several executives commented on supply chain issues. Analysts noted Krait earned 261 thousand dollars. Analysts noted Iris earned 484 thousand dollars. The Crux division brought in 178 thousand dollars. Juno posted 757 thousand dollars in sales.",
+        "expr": [
+          [
+            "+",
+            "Krait"
+          ],
+          [
+            "+",
+            "Crux"
+          ],
+          [
+            "+",
+            "Iris"
+          ],
+          [
+            "-",
+            "Juno"
+          ]
+        ],
+        "values": {
+          "Krait": 261,
+          "Crux": 178,
+          "Iris": 484,
+          "Juno": 757
+        },
+        "answer": 166
+      },
+      "routing": null,
+      "error": 0,
+      "llm_calls": 4,
+      "graph": [
+        {
+          "id": 15,
+          "content": {
+            "text": "Markets were volatile throughout the period. Several executives commented on supply chain issues. Analysts noted Krait earned 261 thousand dollars. Analysts noted Iris earned 484 thousand dollars. The Crux division brought in 178 thousand dollars. Juno posted 757 thousand dollars in sales.",
+            "expr": [
+              [
+                "+",
+                "Krait"
+              ],
+              [
+                "+",
+                "Crux"
+              ],
+              [
+                "+",
+                "Iris"
+              ],
+              [
+                "-",
+                "Juno"
+              ]
+            ]
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 16,
+          "content": {
+            "text": "Markets were volatile throughout the period. Several executives commented on supply chain issues. Analysts noted Krait earned 261 thousand dollars. Analysts noted Iris earned 484 thousand dollars. The Crux division brought in 178 thousand dollars. Juno posted 757 thousand dollars in sales.",
+            "expr": [
+              [
+                "+",
+                "Krait"
+              ],
+              [
+                "+",
+                "Crux"
+              ],
+              [
+                "+",
+                "Iris"
+              ],
+              [
+                "-",
+                "Juno"
+              ]
+            ],
+            "values": {
+              "Krait": 261,
+              "Crux": 178,
+              "Iris": 484,
+              "Juno": 757
+            }
+          },
+          "parents": [
+            15
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 17,
+          "content": {
+            "text": "Markets were volatile throughout the period. Several executives commented on supply chain issues. Analysts noted Krait earned 261 thousand dollars. Analysts noted Iris earned 484 thousand dollars. The Crux division brought in 178 thousand dollars. Juno posted 757 thousand dollars in sales.",
+            "expr": [
+              [
+                "+",
+                "Krait"
+              ],
+              [
+                "+",
+                "Crux"
+              ],
+              [
+                "+",
+                "Iris"
+              ],
+              [
+                "-",
+                "Juno"
+              ]
+            ],
+            "values": {
+              "Krait": 261,
+              "Crux": 178,
+              "Iris": 484,
+              "Juno": 757
+            }
+          },
+          "parents": [
+            15
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 18,
+          "content": {
+            "text": "Markets were volatile throughout the period. Several executives commented on supply chain issues. Analysts noted Krait earned 261 thousand dollars. Analysts noted Iris earned 484 thousand dollars. The Crux division brought in 178 thousand dollars. Juno posted 757 thousand dollars in sales.",
+            "expr": [
+              [
+                "+",
+                "Krait"
+              ],
+              [
+                "+",
+                "Crux"
+              ],
+              [
+                "+",
+                "Iris"
+              ],
+              [
+                "-",
+                "Juno"
+              ]
+            ],
+            "values": {
+              "Krait": 261,
+              "Crux": 178,
+              "Iris": 484,
+              "Juno": 757
+            }
+          },
+          "parents": [
+            15
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 19,
+          "content": {
+            "text": "Markets were volatile throughout the period. Several executives commented on supply chain issues. Analysts noted Krait earned 261 thousand dollars. Analysts noted Iris earned 484 thousand dollars. The Crux division brought in 178 thousand dollars. Juno posted 757 thousand dollars in sales.",
+            "expr": [
+              [
+                "+",
+                "Krait"
+              ],
+              [
+                "+",
+                "Crux"
+              ],
+              [
+                "+",
+                "Iris"
+              ],
+              [
+                "-",
+                "Juno"
+              ]
+            ],
+            "values": {
+              "Krait": 261,
+              "Crux": 178,
+              "Iris": 484,
+              "Juno": 757
+            },
+            "answer": 166
+          },
+          "parents": [
+            16
+          ],
+          "operation": "generate",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "input": {
+        "text": "Hollow posted 282 thousand dollars in sales. Gale posted 153 thousand dollars in sales. Several executives commented on supply chain issues. Analysts noted Krait earned 157 thousand dollars. Analysts noted Lumen earned 263 thousand dollars. Several executives commented on supply chain issues.",
+        "expr": [
+          [
+            "+",
+            "Hollow"
+          ],
+          [
+            "+",
+            "Gale"
+          ],
+          [
+            "+",
+            "Krait"
+          ],
+          [
+            "-",
+            "Lumen"
+          ]
+        ]
+      },
+      "ground_truth": 329,
+      "answer": {
+        "text": "Hollow posted 282 thousand dollars in sales. Gale posted 153 thousand dollars in sales. Several executives commented on supply chain issues. Analysts noted Krait earned 157 thousand dollars. Analysts noted Lumen earned 263 thousand dollars. Several executives commented on supply chain issues.",
+        "expr": [
+          [
+            "+",
+            "Hollow"
+          ],
+          [
+            "+",
+            "Gale"
+          ],
+          [
+            "+",
+            "Krait"
+          ],
+          [
+            "-",
+            "Lumen"
+          ]
+        ],
+        "values": {
+          "Hollow": 282,
+          "Gale": 153,
+          "Krait": 157,
+          "Lumen": 263
+        },
+        "answer": 329
+      },
+      "routing": null,
+      "error": 0,
+      "llm_calls": 4,
+      "graph": [
+        {
+          "id": 20,
+          "content": {
+            "text": "Hollow posted 282 thousand dollars in sales. Gale posted 153 thousand dollars in sales. Several executives commented on supply chain issues. Analysts noted Krait earned 157 thousand dollars. Analysts noted Lumen earned 263 thousand dollars. Several executives commented on supply chain issues.",
+            "expr": [
+              [
+                "+",
+                "Hollow"
+              ],
+              [
+                "+",
+                "Gale"
+              ],
+              [
+                "+",
+                "Krait"
+              ],
+              [
+                "-",
+                "Lumen"
+              ]
+            ]
+          },
+          "parents": [],
+          "operation": "root",
+          "score": null
+        },
+        {
+          "id": 21,
+          "content": {
+            "text": "Hollow posted 282 thousand dollars in sales. Gale posted 153 thousand dollars in sales. Several executives commented on supply chain issues. Analysts noted Krait earned 157 thousand dollars. Analysts noted Lumen earned 263 thousand dollars. Several executives commented on supply chain issues.",
+            "expr": [
+              [
+                "+",
+                "Hollow"
+              ],
+              [
+                "+",
+                "Gale"
+              ],
+              [
+                "+",
+                "Krait"
+              ],
+              [
+                "-",
+                "Lumen"
+              ]
+            ],
+            "values": {
+              "Hollow": 282,
+              "Gale": 153,
+              "Krait": 157,
+              "Lumen": 263
+            }
+          },
+          "parents": [
+            20
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 22,
+          "content": {
+            "text": "Hollow posted 282 thousand dollars in sales. Gale posted 153 thousand dollars in sales. Several executives commented on supply chain issues. Analysts noted Krait earned 157 thousand dollars. Analysts noted Lumen earned 263 thousand dollars. Several executives commented on supply chain issues.",
+            "expr": [
+              [
+                "+",
+                "Hollow"
+              ],
+              [
+                "+",
+                "Gale"
+              ],
+              [
+                "+",
+                "Krait"
+              ],
+              [
+                "-",
+                "Lumen"
+              ]
+            ],
+            "values": {
+              "Hollow": 282,
+              "Gale": 153,
+              "Krait": 157,
+              "Lumen": 263
+            }
+          },
+          "parents": [
+            20
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 23,
+          "content": {
+            "text": "Hollow posted 282 thousand dollars in sales. Gale posted 153 thousand dollars in sales. Several executives commented on supply chain issues. Analysts noted Krait earned 157 thousand dollars. Analysts noted Lumen earned 263 thousand dollars. Several executives commented on supply chain issues.",
+            "expr": [
+              [
+                "+",
+                "Hollow"
+              ],
+              [
+                "+",
+                "Gale"
+              ],
+              [
+                "+",
+                "Krait"
+              ],
+              [
+                "-",
+                "Lumen"
+              ]
+            ],
+            "values": {
+              "Hollow": 282,
+              "Gale": 153,
+              "Krait": 157,
+              "Lumen": 263
+            }
+          },
+          "parents": [
+            20
+          ],
+          "operation": "generate",
+          "score": 0
+        },
+        {
+          "id": 24,
+          "content": {
+            "text": "Hollow posted 282 thousand dollars in sales. Gale posted 153 thousand dollars in sales. Several executives commented on supply chain issues. Analysts noted Krait earned 157 thousand dollars. Analysts noted Lumen earned 263 thousand dollars. Several executives commented on supply chain issues.",
+            "expr": [
+              [
+                "+",
+                "Hollow"
+              ],
+              [
+                "+",
+                "Gale"
+              ],
+              [
+                "+",
+                "Krait"
+              ],
+              [
+                "-",
+                "Lumen"
+              ]
+            ],
+            "values": {
+              "Hollow": 282,
+              "Gale": 153,
+              "Krait": 157,
+              "Lumen": 263
+            },
+            "answer": 329
+          },
+          "parents": [
+            21
           ],
           "operation": "generate",
           "score": 0
